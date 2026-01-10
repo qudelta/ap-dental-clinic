@@ -1,0 +1,55 @@
+// Brand Colors (Premium Clinical Palette)
+$primary-color: #0EB8F6; // Vibrant Cyan - Action & Modernity (Keep this, it's the brand identity)
+$secondary-color: #073E5A; // Deep Navy - Trust & Authority (For Headings/Footer)
+$accent-color: #FFE600; // Bright Yellow - Highlights (Use sparingly for specific CTAs)
+
+// Neutrals
+$white: #ffffff;
+$off-white: #f8fafc; // Very light blue/gray tint
+$light-gray: #e2e8f0;
+$text-dark: #1e293b; // Deep Slate - Softer than black
+$text-light: #64748b; // Muted Slate
+$border-color: #cbd5e1;
+
+// Typography - Unique & Modern
+$font-heading: 'Fraunces', serif; // Variable soft serif - Unique & Premium
+$font-body: 'Manrope', sans-serif; // Clean, modern, distinct digits
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$wide: 1280px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Glassmorphism System
+$glass-bg: rgba(255, 255, 255, 0.7);
+$glass-border: rgba(255, 255, 255, 0.5);
+$glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+
+@mixin glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid $glass-border;
+  box-shadow: $glass-shadow;
+  border-radius: 16px;
+}
+
+@mixin glass-floating {
+  background: rgba(255, 255, 255, 0.95); // Solid for mobile compatibility
+  border-bottom: 1px solid rgba(200, 200, 200, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}

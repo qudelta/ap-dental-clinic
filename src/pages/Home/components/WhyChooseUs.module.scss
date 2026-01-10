@@ -1,0 +1,127 @@
+@import '@/styles/variables';
+
+.section {
+    padding: 4rem 0;
+    position: relative;
+
+    @media (min-width: $tablet) {
+        padding: 8rem 0;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.heading {
+    font-family: $font-heading;
+    font-size: 2rem;
+    color: $secondary-color;
+    margin-bottom: 1rem;
+
+    @media (min-width: $tablet) {
+        font-size: 3rem;
+    }
+}
+
+.subheading {
+    color: $text-light;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    @media (min-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// Wrapper for Framer Motion to ensure it takes space in grid
+.motionWrapper {
+    height: 100%;
+}
+
+.tiltWrapper {
+    height: 100%; // Ensure tilt component fills height
+}
+
+.card {
+    height: 100%;
+    padding: 2rem 1.5rem;
+
+    // Glassmorphism
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
+
+    // Simplified border-radius on mobile
+    border-radius: 16px;
+
+    @media (min-width: $tablet) {
+        padding: 3rem 2rem;
+        border-radius: 20px 60px 20px 60px; // Asymmetrical on desktop
+    }
+
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: default;
+
+    // Hover State (Desktop only)
+    @media (min-width: $tablet) {
+        &:hover {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: $white;
+            border-radius: 60px 20px 60px 20px;
+            box-shadow: 0 15px 40px rgba($primary-color, 0.15);
+
+            .iconWrapper {
+                color: $accent-color;
+                background: $secondary-color;
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+    }
+}
+
+.iconWrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+
+    // Initial State: Navy Icon on Transparent/Light Bg
+    color: $secondary-color;
+    background: rgba($primary-color, 0.1); // Soft Cyan bg
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); // Bouncy transition
+}
+
+.cardTitle {
+    font-family: $font-heading;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: $secondary-color;
+}
+
+.cardDesc {
+    font-size: 1rem;
+    color: $text-light;
+    line-height: 1.6;
+}

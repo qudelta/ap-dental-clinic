@@ -1,0 +1,119 @@
+@import '@/styles/variables';
+
+.page {
+    padding: 100px 0 3rem;
+    min-height: 80vh;
+    background: $white;
+
+    @media (min-width: $tablet) {
+        padding: 120px 0 6rem;
+    }
+}
+
+.title {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+
+    @media (min-width: $tablet) {
+        margin-bottom: 4rem;
+        font-size: 2.5rem;
+    }
+}
+
+.section {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+
+    @media (min-width: $tablet) {
+        margin: 0 auto 3rem;
+        padding: 0;
+    }
+
+    h2 {
+        color: $text-dark;
+        border-bottom: 2px solid $light-gray;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+
+        @media (min-width: $tablet) {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.item {
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    @media (min-width: $tablet) {
+        margin-bottom: 1rem;
+    }
+
+    &.open {
+        border-color: $primary-color;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+        .question {
+            background: rgba($primary-color, 0.05);
+            color: $primary-color;
+        }
+    }
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 44px;
+    padding: 1rem;
+    background: white;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    color: $text-dark;
+    transition: background 0.3s;
+    gap: 0.5rem;
+
+    @media (min-width: $tablet) {
+        padding: 1.25rem;
+        font-size: 1.1rem;
+    }
+
+    &:hover {
+        background: $light-gray;
+    }
+}
+
+.icon {
+    font-size: 0.9rem;
+    color: $secondary-color;
+    flex-shrink: 0;
+}
+
+.answer {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    p {
+        padding: 0 1rem 1rem;
+        margin: 0;
+        color: $text-light;
+        line-height: 1.6;
+        font-size: 0.9rem;
+
+        @media (min-width: $tablet) {
+            padding: 0 1.25rem 1.25rem;
+        }
+    }
+}
