@@ -52,13 +52,32 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 4: Contact Info */}
+                    {/* Column 4: Baramulla Branch */}
                     <div className={styles.col}>
-                        <h3>Contact Us</h3>
+                        <h3>Baramulla Branch</h3>
                         <ul className={styles.contactList}>
                             <li>
                                 <FaMapMarkerAlt className={styles.icon} />
-                                <span>123, 4th Main, Indiranagar,<br />Bangalore, 560038</span>
+                                <span>1st Floor, Mint Business Centre,<br />Baramulla, Jammu & Kashmir</span>
+                            </li>
+                            <li>
+                                <FaPhone className={styles.icon} />
+                                <span>+91 95418 48030</span>
+                            </li>
+                            <li>
+                                <FaClock className={styles.icon} />
+                                <span>Mon - Sat: 10AM - 8PM<br />Sun: Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Column 5: Kanispora Branch */}
+                    <div className={styles.col}>
+                        <h3>Kanispora Branch</h3>
+                        <ul className={styles.contactList}>
+                            <li>
+                                <FaMapMarkerAlt className={styles.icon} />
+                                <span>National Highway,<br />Kanispora, Jammu & Kashmir</span>
                             </li>
                             <li>
                                 <FaPhone className={styles.icon} />
@@ -68,10 +87,6 @@ const Footer = () => {
                                 <FaEnvelope className={styles.icon} />
                                 <span>appointments@apdental.com</span>
                             </li>
-                            <li>
-                                <FaClock className={styles.icon} />
-                                <span>Mon - Sat: 10AM - 8PM<br />Sun: Closed</span>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -79,7 +94,7 @@ const Footer = () => {
                 <div className={styles.bottom}>
                     <p>&copy; {currentYear} AP Dental Clinic. All rights reserved.</p>
                     <div className={styles.bottomLinks}>
-                        <span>Made with &hearts; By Qudelta Studios</span>
+                        <span>Designed & Developed by <a href="https://qudeltastudios.com" target="_blank" rel="noopener noreferrer">Qudelta Studios</a></span>
                         <Link to="/privacy">Privacy Policy</Link>
                         <Link to="/terms">Terms of Service</Link>
                     </div>

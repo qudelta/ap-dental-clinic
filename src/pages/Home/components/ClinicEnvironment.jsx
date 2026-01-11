@@ -3,9 +3,10 @@ import styles from './ClinicEnvironment.module.scss';
 import { Link } from 'react-router-dom';
 
 const photos = [
-    { label: 'Consultation Room', delay: 0 },
-    { label: 'Sterilization Area', delay: 0.1 },
+    { label: 'Reception Desk', delay: 0 },
+    { label: 'Consultation Room', delay: 0.1 },
     { label: 'Patient Waiting Area', delay: 0.2 },
+    { label: 'Clinic Exterior', delay: 0.3 },
 ];
 
 const ClinicEnvironment = () => {
@@ -22,8 +23,8 @@ const ClinicEnvironment = () => {
                         <motion.div
                             key={index}
                             className={styles.photoCard}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            initial={{ scale: 0.95 }}
+                            whileInView={{ scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: photo.delay, duration: 0.4 }}
                         >

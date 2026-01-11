@@ -8,8 +8,8 @@ const DoctorHighlight = () => {
         <section className={styles.section}>
             <div className={`container ${styles.container}`}>
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ x: -20 }}
+                    whileInView={{ x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                     className={styles.imageWrapper}
@@ -21,8 +21,8 @@ const DoctorHighlight = () => {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ x: -20 }}
+                    whileInView={{ x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className={styles.content}

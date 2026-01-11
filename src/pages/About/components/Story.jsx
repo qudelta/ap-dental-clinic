@@ -7,8 +7,8 @@ const Story = () => {
             <div className={`container ${styles.container}`}>
                 <motion.div
                     className={styles.content}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ x: -20 }}
+                    whileInView={{ x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
@@ -24,8 +24,8 @@ const Story = () => {
 
                 <motion.div
                     className={styles.image}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ x: -20 }}
+                    whileInView={{ x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.15 }}
                 >

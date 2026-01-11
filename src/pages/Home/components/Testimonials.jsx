@@ -35,8 +35,8 @@ const Testimonials = () => {
                         <motion.div
                             key={index}
                             className={styles.card}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            initial={{ y: 20 }}
+                            whileInView={{ y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.4 }}
                         >

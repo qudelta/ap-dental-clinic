@@ -1,9 +1,9 @@
-@import '@/styles/variables';
+@use '@/styles/variables' as *;
 
 // Use a deep blue for the footer background, similar to the reference
 // Footer uses the Deep Navy for background
 $footer-bg: $secondary-color;
-$footer-text: rgba(255, 255, 255, 0.7);
+$footer-text: rgba(255, 255, 255, 0.9); // Increased from 0.7 for better readability
 $footer-heading: $white;
 
 .footer {
@@ -24,7 +24,7 @@ $footer-heading: $white;
     }
 
     @media (min-width: $desktop) {
-        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.2fr;
     }
 }
 
@@ -137,10 +137,26 @@ $footer-heading: $white;
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+
+    span {
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+
+            &:hover {
+                text-decoration: underline;
+                opacity: 0.9;
+            }
+        }
+    }
 
     a {
         color: $footer-text;
+        text-decoration: none;
+        transition: color 0.3s ease;
 
         &:hover {
             color: $white;

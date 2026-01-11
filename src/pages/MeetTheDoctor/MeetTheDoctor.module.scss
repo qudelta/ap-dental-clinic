@@ -1,4 +1,5 @@
-@import '@/styles/variables';
+@use 'sass:color';
+@use '@/styles/variables' as *;
 
 .page {
     padding-bottom: 6rem;
@@ -115,7 +116,7 @@
 
 .cardImage {
     height: 200px;
-    background: linear-gradient(135deg, $secondary-color, darken($secondary-color, 10%));
+    background: linear-gradient(135deg, $secondary-color, color.scale($secondary-color, $lightness: -52.5773%));
 
     @media (min-width: $desktop) {
         height: 180px;

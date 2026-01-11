@@ -67,8 +67,8 @@ const MeetTheDoctor = () => {
                     {doctors.map((doctor, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            initial={{ scale: 0.95 }}
+                            whileInView={{ scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.4 }}
                             className={styles.doctorCard}
