@@ -29,11 +29,13 @@ $footer-heading: $white;
 }
 
 .brand {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: $white;
     margin-bottom: 1rem;
     display: inline-block;
+}
+
+.logoImg {
+    height: 80px;
+    width: auto;
 }
 
 .about {

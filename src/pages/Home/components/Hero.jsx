@@ -5,37 +5,34 @@ import styles from './Hero.module.scss';
 const Hero = () => {
     return (
         <section className={styles.hero}>
+            <div className={styles.heroBackground}>
+                <div className={styles.blob}></div>
+                <img src="/logo.svg" alt="" className={styles.backgroundLogo} />
+            </div>
+
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>
-                    <motion.h1
-                        initial={{ y: 20 }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        Redefining Your <br /><span className={styles.highlight}>Smile Journey.</span>
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ y: 20 }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.15 }}
-                    >
-                        Experience world-class orthodontics and dental care in a calm, state-of-the-art environment. Your smile is our masterpiece.
-                    </motion.p>
-
                     <motion.div
-                        className={styles.actions}
-                        initial={{ y: 20 }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
                     >
-                        <Link to="/contact" className="btn btn-primary">Book Consultation</Link>
-                        <Link to="/doctor" className="btn btn-outline">Meet Dr. Bali</Link>
+                        <h1 className={styles.mainTitle}>
+                            Redefining Your <br />
+                            <span className={styles.highlight}>Smile Journey.</span>
+                        </h1>
+
+                        <p className={styles.subtitle}>
+                            Experience world-class orthodontics and dental care in a calm,
+                            state-of-the-art environment. Your smile is our masterpiece.
+                        </p>
+
+                        <div className={styles.actions}>
+                            <Link to="/contact" className="btn btn-primary">Book Consultation</Link>
+                            <Link to="/doctor" className="btn btn-outline">Meet Our Team</Link>
+                        </div>
                     </motion.div>
                 </div>
-
-                {/* Placeholder for Hero Image - User to replace */}
-                <div className={styles.imageOverlay}></div>
             </div>
         </section>
     );

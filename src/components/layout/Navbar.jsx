@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaPhone, FaTooth } from 'react-icons/fa';
+import { FaBars, FaTimes, FaPhone } from 'react-icons/fa';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -49,8 +49,8 @@ const Navbar = () => {
         <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.navContainer}`}>
                 <Link to="/" className={styles.logo}>
-                    <FaTooth className={styles.logoIcon} />
-                    <span>AP Dental</span>
+                    <img src="/logo.svg" alt="AP Dental" className={styles.logoImg} />
+                    <span className={styles.brandText}>AP Dental</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -92,7 +92,7 @@ const Navbar = () => {
                             <FaPhone />
                             <span>+91 123-456-7890</span>
                         </a>
-                        <NavLink to="/contact" className="btn btn-primary">Book Consultation</NavLink>
+                        <NavLink to="/contact" className={styles.navButton}>Book Consultation</NavLink>
                     </div>
                 </nav>
 

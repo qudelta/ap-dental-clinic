@@ -2,128 +2,158 @@
 
 .hero {
     position: relative;
-    padding: 140px 0 80px; // Standardized spacing
+    padding: 120px 0 80px;
+    overflow: hidden;
 
-    @media (max-width: $tablet) {
-        padding: 100px 0 60px;
-        min-height: auto; // Let content define height on mobile
-        flex-direction: column;
+    @media (min-width: $tablet) {
+        padding: 160px 0 100px;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
     }
-
-    // Background is handled globally by body, but we can add floating shapes here if needed
 }
 
 .container {
     position: relative;
     z-index: 2;
-}
-
-.content {
-    max-width: 700px;
-    position: relative;
-    z-index: 10;
-
-    // Card styling
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
 
     @media (min-width: $tablet) {
-        padding: 3rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 4rem;
     }
+}
 
-    h1 {
-        font-family: $font-heading;
-        font-size: 2.5rem;
-        color: $secondary-color;
-        margin-bottom: 1rem;
-        line-height: 1.15;
+.heroContent {
+    text-align: center;
 
-        @media (min-width: $tablet) {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-        }
+    @media (min-width: $tablet) {
+        text-align: left;
     }
+}
 
-    p {
-        font-size: 1rem;
-        color: $secondary-color;
+.mainTitle {
+    font-family: 'Cinzel', serif;
+    font-size: 2.75rem;
+    color: $secondary-color;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+
+    @media (min-width: $tablet) {
+        font-size: 3.5rem;
         margin-bottom: 2rem;
-        line-height: 1.6;
-        font-weight: 500;
+    }
 
-        @media (min-width: $tablet) {
-            font-size: 1.25rem;
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
-        }
+    @media (min-width: 1200px) {
+        font-size: 4.5rem;
     }
 }
 
 .highlight {
-    color: $secondary-color; // Navy Text
+    color: $secondary-color;
     position: relative;
-    z-index: 1;
-    display: inline-block;
-    padding: 0 0.2rem;
+    white-space: nowrap;
 
     &::after {
         content: '';
         position: absolute;
-        bottom: 10%;
+        bottom: 5px;
         left: 0;
         width: 100%;
-        height: 60%; // Covers bottom half like a highlighter pen
-        background: $accent-color; // YELLOW Highlight
-        opacity: 0.8;
+        height: 15px;
+        background: rgba(255, 235, 59, 0.5);
         z-index: -1;
-        transform: skewX(-10deg); // Dynamic angle
+        transform: rotate(-1deg);
+    }
+}
+
+.subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    color: rgba($secondary-color, 0.8);
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+
+    @media (min-width: $tablet) {
+        margin: 0 0 3rem 0;
+        font-size: 1.2rem;
     }
 }
 
 .actions {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    @media (min-width: $mobile) {
-        flex-direction: row;
-        gap: 1rem;
+    @media (min-width: $tablet) {
+        justify-content: flex-start;
     }
 
-    .btn-outline {
-        border: 2px solid $secondary-color;
-        color: $secondary-color;
-        font-weight: 600;
-        padding: 0.75rem 1.5rem;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: all 0.3s;
-
-        &:hover {
-            background: $secondary-color;
-            color: $white;
-            border-color: transparent;
-        }
+    .btn {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
     }
 }
 
-// Removed complex clip-path overlay to avoid broken UI feeling
-.imageOverlay {
-    display: none;
+.heroVisual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
 
-    @media (min-width: $desktop) {
-        display: block;
+.pLogoContainer {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $tablet) {
+        max-width: 500px; // Larger logo on desktop
+    }
+
+    // Add a simple glow
+    &::before {
+        content: '';
         position: absolute;
         top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        width: 45%;
-        height: 80%;
-        background: #F0F9FF; // Soft Cyan tint
-        border-radius: 20px 0 0 20px;
-        z-index: 0; // Sit behind content if overlap occurs
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 110%;
+        height: 110%;
+        background: radial-gradient(circle, rgba(14, 184, 246, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: -1;
+    }
+}
+
+.pLogo {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.1));
+    opacity: 1;
+    animation: floatLogo 6s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
     }
 }

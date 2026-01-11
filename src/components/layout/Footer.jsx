@@ -11,7 +11,9 @@ const Footer = () => {
                 <div className={styles.grid}>
                     {/* Column 1: Brand & About */}
                     <div className={styles.col}>
-                        <div className={styles.brand}>AP Dental</div>
+                        <div className={styles.brand}>
+                            <img src="/logo.svg" alt="AP Dental" className={styles.logoImg} />
+                        </div>
                         <p className={styles.about}>
                             AP Dental Clinic - A premier orthodontic and dental care center providing specialized treatments in a calm, ethical environment.
                         </p>
