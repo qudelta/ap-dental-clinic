@@ -28,18 +28,18 @@ const Locations = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            <h3>AP Dental Clinic - Main Branch</h3>
+                            <h3>Baramulla Branch</h3>
                             <div className={styles.infoRow}>
                                 <FaMapMarkerAlt className={styles.icon} />
-                                <p>123 Dental Avenue, Medical District<br />New Delhi, India 110001</p>
+                                <p>1st Floor, Mint Business Centre,<br />Baramulla, Jammu & Kashmir</p>
                             </div>
                             <div className={styles.infoRow}>
                                 <FaPhone className={styles.icon} />
-                                <p>+91 123-456-7890</p>
+                                <p>+91 95418 48030</p>
                             </div>
                             <div className={styles.infoRow}>
                                 <FaClock className={styles.icon} />
-                                <p>Mon - Sat: 10:00 AM - 8:00 PM<br />Sun: By Appointment</p>
+                                <p>Mon - Sat: 10AM - 8PM<br />Sun: Closed</p>
                             </div>
                         </motion.div>
 
@@ -50,18 +50,18 @@ const Locations = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            <h3>AP Dental Clinic - City Center</h3>
+                            <h3>Kanispora Branch</h3>
                             <div className={styles.infoRow}>
                                 <FaMapMarkerAlt className={styles.icon} />
-                                <p>456 Wellness Plaza, City Center<br />New Delhi, India 110002</p>
+                                <p>National Highway,<br />Kanispora, Jammu & Kashmir</p>
                             </div>
                             <div className={styles.infoRow}>
                                 <FaPhone className={styles.icon} />
-                                <p>+91 987-654-3210</p>
+                                <p>+91 95418 48030</p>
                             </div>
                             <div className={styles.infoRow}>
                                 <FaClock className={styles.icon} />
-                                <p>Mon - Sat: 11:00 AM - 9:00 PM</p>
+                                <p>Mon - Sat: 10AM - 8PM<br />Sun: Closed</p>
                             </div>
                         </motion.div>
                     </div>
@@ -77,7 +77,7 @@ const Locations = () => {
                         <div className={styles.mapPlaceholder}>
                             <FaMapMarkerAlt className={styles.mapIcon} />
                             <span>Google Map Embed</span>
-                            <small>Details coming soon</small>
+                            <small>Baramulla / Kanispora</small>
                         </div>
                     </motion.div>
                 </div>

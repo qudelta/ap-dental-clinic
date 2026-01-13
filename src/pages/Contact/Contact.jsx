@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import styles from './Contact.module.scss';
-import axios from 'axios';
+
 
 const branches = {
     baramulla: {

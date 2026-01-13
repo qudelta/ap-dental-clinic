@@ -10,6 +10,13 @@ const doctors = [
         image: '', // Placeholder
     },
     {
+        id: 'serish-dr',
+        name: 'Dr. Serish',
+        specialty: 'BDS',
+        exp: 'Experienced Professional',
+        image: '', // Placeholder
+    },
+    {
         id: 'rajesh-kumar',
         name: 'Dr. Rajesh Kumar',
         specialty: 'General Dentist (BDS, MDS)',

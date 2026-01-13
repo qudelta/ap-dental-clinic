@@ -1,0 +1,35 @@
+
+> app@0.0.0 lint
+> eslint .
+
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\components\layout\CustomCursor.jsx
+  1:21  error  'useRef' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\About\components\Philosophy.jsx
+  16:59  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\DoctorHighlight.jsx
+  45:25   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  45:135  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\MeetTheDoctor\MeetTheDoctor.jsx
+  119:21  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  119:73  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\PatientExperience\PatientExperience.jsx
+  102:63  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Treatments\pages\CosmeticDentistry.jsx
+  11:44   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  37:127  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Treatments\pages\Orthodontics.jsx
+  19:44  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  19:72  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Treatments\pages\PreventiveCare.jsx
+  42:48  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+??? 12 problems (12 errors, 0 warnings)
+

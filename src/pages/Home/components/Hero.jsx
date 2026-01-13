@@ -11,6 +11,20 @@ const Hero = () => {
             </div>
 
             <div className={`container ${styles.container}`}>
+                {/* Right Side Visual */}
+                <div className={styles.heroVisual}>
+                    <div className={styles.pLogoContainer}>
+                        <motion.img
+                            src="/logo-transparent.png"
+                            alt="AP Dental Logo"
+                            className={styles.pLogo}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        />
+                    </div>
+                </div>
+
                 <div className={styles.content}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

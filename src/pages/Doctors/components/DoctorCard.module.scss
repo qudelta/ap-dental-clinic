@@ -14,18 +14,26 @@
 }
 
 .imagePlaceholder {
-    height: 250px;
-    background-color: #e0e0e0;
+    height: 280px;
+    background: linear-gradient(135deg, $secondary-color, color.scale($secondary-color, $lightness: 10%));
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #888;
-    font-weight: 600;
+    color: $white;
+    font-weight: 500;
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    padding: 2rem;
+    text-align: center;
 }
 
 .content {
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .name {
@@ -36,9 +44,16 @@
 
 .specialty {
     color: $primary-color;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(14, 184, 246, 0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    display: inline-block;
+    align-self: center; // context is flex column
 }
 
 .exp {

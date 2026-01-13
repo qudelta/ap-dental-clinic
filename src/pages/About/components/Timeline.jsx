@@ -1,10 +1,10 @@
 import styles from './Timeline.module.scss';
 
 const milestones = [
-    { year: '2012', title: 'Clinic Established', desc: 'Opened doors in Indiranagar with a single dental chair.' },
-    { year: '2015', title: 'Advanced Orthodontics', desc: 'Introduced Invisalign and clear aligner therapies.' },
-    { year: '2018', title: 'Digital Integration', desc: 'Became a fully digital clinic with OPG and intraoral scanners.' },
-    { year: '2023', title: 'New Facility', desc: 'Moved to our current state-of-the-art center.' },
+    { year: '2019', title: 'Clinic Established', desc: 'Opened doors in Kanispora with a vision for excellence.' },
+    { year: '2021', title: 'Advanced Orthodontics', desc: 'Introduced Invisalign and digital aligner therapies.' },
+    { year: '2023', title: 'Digital Integration', desc: 'Became a fully digital clinic with OPG and intraoral scanners.' },
+    { year: '2026', title: 'Expansion', desc: 'Opened our new branch at Mint Business Centre, Baramulla.' },
 ];
 
 const Timeline = () => {

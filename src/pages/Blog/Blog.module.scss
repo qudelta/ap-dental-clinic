@@ -24,7 +24,10 @@
     text-align: center;
     color: $text-light;
     margin-bottom: 2rem;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 
     @media (min-width: $tablet) {
         margin-bottom: 4rem;
@@ -34,15 +37,14 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 2rem;
 
-    @media (min-width: $mobile) {
+    @media (min-width: $tablet) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (min-width: $tablet) {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 2rem;
+    @media (min-width: 1100px) {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -50,11 +52,16 @@
     background: $white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
         transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-color: rgba($primary-color, 0.3);
     }
 }
 
@@ -72,38 +79,47 @@
 }
 
 .content {
-    padding: 1rem;
-
-    @media (min-width: $tablet) {
-        padding: 1.5rem;
-    }
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .meta {
     display: flex;
-    justify-content: space-between;
-    font-size: 0.75rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
     color: $text-light;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
+    align-items: center;
 
-    @media (min-width: $tablet) {
-        font-size: 0.85rem;
-        margin-bottom: 0.75rem;
+    span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-weight: 500;
     }
 }
 
-.card h2 {
-    font-size: 1.1rem;
-    color: $text-dark;
-    margin-bottom: 0.5rem;
+.postTitle {
+    font-family: $font-heading;
+    font-size: 1.25rem;
+    color: $secondary-color;
+    margin-bottom: 0.75rem;
     line-height: 1.4;
+    font-weight: 700;
 
     @media (min-width: $tablet) {
-        font-size: 1.25rem;
-        margin-bottom: 0.75rem;
+        font-size: 1.5rem;
     }
+}
+
+.excerpt {
+    color: $text-light;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex: 1;
 }
 
 .card p {
@@ -121,9 +137,15 @@
     color: $primary-color;
     font-weight: 600;
     font-size: 0.9rem;
-    min-height: 44px;
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+    color: $primary-color;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: gap 0.3s ease;
+    margin-top: auto;
 
     &:hover {
         text-decoration: underline;

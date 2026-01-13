@@ -63,13 +63,16 @@
 
 .icon {
     font-size: 1.25rem;
-    color: color.scale($primary-color, $lightness: 40.8%);
-    margin-bottom: 0.75rem;
+    color: rgba($primary-color, 0.2);
+    margin-bottom: 1rem;
+}
 
-    @media (min-width: $tablet) {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
+.stars {
+    display: flex;
+    gap: 0.2rem;
+    color: #FFD700; // Gold
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
 .text {

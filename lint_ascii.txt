@@ -1,0 +1,50 @@
+
+> app@0.0.0 lint
+> eslint .
+
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\components\layout\CustomCursor.jsx
+  3:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u              no-unused-vars
+  6:11  error  'cursorRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\About\components\Story.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Contact\Contact.jsx
+  5:8  error  'axios' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\BeforeAfter.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\ClinicEnvironment.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\DoctorHighlight.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\Hero.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\Locations.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\Services.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\Testimonials.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\Home\components\WhyChooseUs.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\MeetTheDoctor\MeetTheDoctor.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\src\pages\PatientExperience\PatientExperience.jsx
+  7:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\ap-dental-clinic\ap-dental-clinic\vite.config.js
+  10:25  error  '__dirname' is not defined  no-undef
+
+??? 15 problems (15 errors, 0 warnings)
+

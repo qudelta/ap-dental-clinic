@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './CustomCursor.module.scss';
 import { motion } from 'framer-motion';
 
 const CustomCursor = () => {
-    const cursorRef = useRef(null);
+
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
 

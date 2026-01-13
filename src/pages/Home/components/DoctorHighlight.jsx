@@ -30,7 +30,7 @@ const DoctorHighlight = () => {
                     <span className={styles.tag}>5 Specialist Doctors</span>
                     <h2 className={styles.name}>Meet Our Expert Team</h2>
                     <div className={styles.qualifications}>
-                        <span className={styles.qual}><FaGraduationCap /> All MDS from Govt. Dental College, Srinagar</span>
+                        <span className={styles.qual}><FaGraduationCap /> Graduates from Govt. Dental College, Srinagar</span>
                     </div>
 
                     <div className={styles.specialties}>

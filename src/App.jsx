@@ -17,6 +17,7 @@ import Testimonials from './pages/Testimonials/Testimonials';
 import Contact from './pages/Contact/Contact';
 import FAQ from './pages/FAQ/FAQ';
 import Blog from './pages/Blog/Blog';
+import BlogPost from './pages/Blog/BlogPost';
 import Privacy from './pages/Legal/Privacy';
 import Terms from './pages/Legal/Terms';
 import PatientResources from './pages/PatientExperience/PatientResources';
@@ -44,6 +45,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="faq" element={<FAQ />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="resources" element={<PatientResources />} />
             <Route path="privacy" element={<Privacy />} />
             <Route path="terms" element={<Terms />} />

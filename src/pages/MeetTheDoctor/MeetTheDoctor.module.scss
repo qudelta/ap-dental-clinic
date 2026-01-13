@@ -192,10 +192,10 @@
 // Stats Section
 .statsSection {
     background: $secondary-color;
-    padding: 3rem 0;
+    padding: 6rem 0;
 
     @media (min-width: $tablet) {
-        padding: 4rem 0;
+        padding: 8rem 0;
     }
 }
 
@@ -218,12 +218,13 @@
 
 .number {
     font-family: $font-heading;
-    font-size: 2rem;
+    font-size: 3rem;
     color: $accent-color;
     font-weight: 700;
+    margin-bottom: 0.5rem;
 
     @media (min-width: $tablet) {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 }
 

@@ -12,7 +12,7 @@ const Footer = () => {
                     {/* Column 1: Brand & About */}
                     <div className={styles.col}>
                         <div className={styles.brand}>
-                            <img src="/logo.svg" alt="AP Dental" className={styles.logoImg} />
+                            <img src="/logo-transparent.png" alt="AP Dental" className={styles.logoImg} />
                         </div>
                         <p className={styles.about}>
                             AP Dental Clinic - A premier orthodontic and dental care center providing specialized treatments in a calm, ethical environment.
@@ -30,7 +30,7 @@ const Footer = () => {
                         <ul>
                             <li><Link to="/about">About Us</Link></li>
                             <li><Link to="/technology">Our Technology</Link></li>
-                            <li><Link to="/doctor">Meet Dr. Bali</Link></li>
+                            <li><Link to="/doctor">Meet Our Doctors</Link></li>
                             <li><Link to="/experience">Patient Experience</Link></li>
                             <li><Link to="/resources">Patient Resources</Link></li>
                             <li><Link to="/faq">FAQs</Link></li>
@@ -96,9 +96,11 @@ const Footer = () => {
                 <div className={styles.bottom}>
                     <p>&copy; {currentYear} AP Dental Clinic. All rights reserved.</p>
                     <div className={styles.bottomLinks}>
-                        <span>Designed & Developed by <a href="https://qudeltastudios.com" target="_blank" rel="noopener noreferrer">Qudelta Studios</a></span>
                         <Link to="/privacy">Privacy Policy</Link>
                         <Link to="/terms">Terms of Service</Link>
+                    </div>
+                    <div className={styles.credit}>
+                        <span>Designed & Developed by <a href="https://qudeltastudios.com" target="_blank" rel="noopener noreferrer">Qudelta Studios</a></span>
                     </div>
                 </div>
             </div>

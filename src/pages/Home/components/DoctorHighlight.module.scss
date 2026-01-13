@@ -2,11 +2,11 @@
 @use '@/styles/variables' as *;
 
 .section {
-    padding: 4rem 0;
+    padding: 5rem 0;
     background-color: $white;
 
     @media (min-width: $tablet) {
-        padding: 6rem 0;
+        padding: 8rem 0;
     }
 }
 
@@ -18,7 +18,7 @@
 
     @media (min-width: $desktop) {
         grid-template-columns: 1fr 1.2fr;
-        gap: 4rem;
+        gap: 6rem;
     }
 }
 
@@ -119,16 +119,18 @@
 }
 
 .quote {
-    font-size: 1rem;
+    font-family: $font-heading;
+    font-size: 1.25rem;
     font-style: italic;
-    color: $text-dark;
+    color: $secondary-color;
     border-left: 4px solid $accent-color;
     padding-left: 1.5rem;
     margin-bottom: 2rem;
-    line-height: 1.7;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
 
     @media (min-width: $tablet) {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         line-height: 1.8;
     }
 }

@@ -36,10 +36,10 @@ const PatientExperience = () => {
     ];
 
     const comfortFeatures = [
-        { icon: <FaCoffee />, title: 'Refreshments', description: 'Complimentary tea, coffee, and water' },
         { icon: <FaWifi />, title: 'Free WiFi', description: 'Stay connected in our waiting area' },
         { icon: <FaTv />, title: 'Entertainment', description: 'TV and magazines to help you relax' },
-        { icon: <FaMusic />, title: 'Calming Music', description: 'Soothing background ambience' }
+        { icon: <FaSmileBeam />, title: 'Ergonomic Chairs', description: 'Designed for your ultimate comfort during treatment' },
+        { icon: <FaShieldAlt />, title: 'Proper Sitting Area', description: 'Spacious and comfortable seating for you and your family' }
     ];
 
     const techFeatures = [
@@ -193,30 +193,7 @@ const PatientExperience = () => {
                     </div>
                 </section>
 
-                {/* Payment & Insurance */}
-                <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Payment & Insurance</h2>
-                    <p className={styles.sectionSubtitle}>Flexible options to make quality care accessible</p>
 
-                    <div className={styles.paymentGrid}>
-                        <div className={styles.paymentCard}>
-                            <FaCreditCard className={styles.paymentIcon} />
-                            <h3>Payment Options</h3>
-                            <ul>
-                                <li>Cash and Card accepted</li>
-                                <li>Digital payment options (UPI, PayTM)</li>
-                                <li>Payment plans available</li>
-                                <li>Insurance processing assistance</li>
-                            </ul>
-                        </div>
-                        <div className={styles.paymentCard}>
-                            <FaClipboardCheck className={styles.paymentIcon} />
-                            <h3>Insurance Partners</h3>
-                            <p>We work with major insurance providers to maximize your benefits. Our team will help you understand your coverage and file claims.</p>
-                            <p className={styles.highlight}>Bring your insurance card to your first visit!</p>
-                        </div>
-                    </div>
-                </section>
 
                 {/* CTA */}
                 <div className={styles.cta}>

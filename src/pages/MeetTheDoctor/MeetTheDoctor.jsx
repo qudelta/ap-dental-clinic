@@ -34,7 +34,7 @@ const doctors = [
     {
         name: 'Dr. Serish',
         specialty: 'General Dentist',
-        qualification: 'BDS, MDS',
+        qualification: 'BDS',
         description: 'Comprehensive general dentistry including cleanings, fillings, and preventive care.',
         experience: '10+ years'
     }
@@ -50,7 +50,7 @@ const MeetTheDoctor = () => {
                         <span className={styles.subtitle}>Meet Our Expert Team</span>
                         <h1>Your Smile, Our Passion</h1>
                         <p className={styles.heroText}>
-                            All our specialists are MDS graduates from the prestigious<br />
+                            Our specialists are graduates from the prestigious<br />
                             <strong>Government Dental College, Srinagar</strong>
                         </p>
                         <div className={styles.actions}>
@@ -108,7 +108,7 @@ const MeetTheDoctor = () => {
                         </div>
                         <div className={styles.statItem}>
                             <span className={styles.number}>100%</span>
-                            <span className={styles.label}>Qualified MDS Team</span>
+                            <span className={styles.label}>Qualified Team</span>
                         </div>
                     </div>
                 </div>

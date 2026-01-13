@@ -17,21 +17,24 @@
 }
 
 .heading {
-    font-size: 1.75rem;
+    font-family: $font-heading; // Ensure serif font
+    font-size: 2rem; // Slightly larger base
     margin-bottom: 0.75rem;
     font-weight: 700;
     color: $white;
 
     @media (min-width: $tablet) {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
         margin-bottom: 1rem;
     }
 }
 
 .subheading {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    color: $white; // Explicit white
+    opacity: 0.95; // Higher opacity
+    font-weight: 500; // Slightly bolder for readability
 
     @media (min-width: $tablet) {
         font-size: 1.25rem;
