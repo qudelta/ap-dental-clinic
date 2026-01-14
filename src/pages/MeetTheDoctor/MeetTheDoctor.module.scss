@@ -123,6 +123,13 @@
     }
 }
 
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
 .placeholderImage {
     width: 100%;
     height: 100%;
@@ -193,9 +200,11 @@
 .statsSection {
     background: $secondary-color;
     padding: 6rem 0;
+    margin-top: 4rem;
 
     @media (min-width: $tablet) {
         padding: 8rem 0;
+        margin-top: 6rem;
     }
 }
 

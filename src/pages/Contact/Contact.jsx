@@ -12,7 +12,8 @@ const branches = {
         phone: '+91 95418 48030',
         email: 'appointments@apdental.com',
         hours: 'Mon - Sat: 10:00 AM - 8:00 PM',
-        subHours: 'Sun: Closed'
+        subHours: 'Sun: Closed',
+        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.621215160534!2d74.35874231521404!3d34.15617298057774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e19c0a6a4d7d3b%3A0x6b0a6a4d7d3b!2sBaramulla!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin' // Placeholder/Approx for Baramulla
     },
     kanispora: {
         name: 'Kanispora Branch',
@@ -21,45 +22,42 @@ const branches = {
         phone: '+91 95418 48030',
         email: 'appointments@apdental.com',
         hours: 'Mon - Sat: 10:00 AM - 8:00 PM',
-        subHours: 'Sun: Closed'
+        subHours: 'Sun: Closed',
+        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d824.792686457586!2d74.40040584051815!3d34.218658389008425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e107bb4fcc5273%3A0xa136762abec2ce06!2sAP%20DENTAL%20CLINIC%2C%20BARAMULLA!5e0!3m2!1sen!2sin!4v1768378130022!5m2!1sen!2sin'
     }
 };
 
+
+
 const Contact = () => {
-    const [selectedBranch, setSelectedBranch] = useState('baramulla');
-    const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
-    const branch = branches[selectedBranch];
+    const { register, handleSubmit, watch, formState: { errors, isSubmitting }, reset } = useForm({
+        defaultValues: {
+            location: 'baramulla'
+        }
+    });
+
+    const selectedBranchKey = watch('location') || 'baramulla';
+    const branch = branches[selectedBranchKey];
 
     const onSubmit = async (data) => {
-        // Placeholder for API call
-        console.log({ ...data, branch: selectedBranch });
-        await new Promise(r => setTimeout(r, 1000)); // Simulate delay
-        alert(`Thank you, ${data.name}! Your appointment request has been sent to our ${branch.name}.`);
+        const message = `*New Appointment Request*:
+- *Name*: ${data.name}
+- *Phone*: ${data.phone}
+- *Branch*: ${data.location === 'baramulla' ? 'Baramulla Branch' : 'Kanispora Branch'}
+- *Date*: ${data.date}
+- *Reason*: ${data.reason}
+- *Message*: ${data.message || 'N/A'}`;
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/918825068932?text=${encodedMessage}`;
+
+        window.open(whatsappUrl, '_blank');
         reset();
     };
 
     return (
         <div className={styles.page}>
             <div className="container">
-                {/* Branch Selector */}
-                <div className={styles.branchSelector}>
-                    <h2>Choose Your Location</h2>
-                    <div className={styles.branchTabs}>
-                        <button
-                            className={`${styles.tab} ${selectedBranch === 'baramulla' ? styles.active : ''}`}
-                            onClick={() => setSelectedBranch('baramulla')}
-                        >
-                            📍 Baramulla
-                        </button>
-                        <button
-                            className={`${styles.tab} ${selectedBranch === 'kanispora' ? styles.active : ''}`}
-                            onClick={() => setSelectedBranch('kanispora')}
-                        >
-                            📍 Kanispora
-                        </button>
-                    </div>
-                </div>
-
                 <div className={styles.grid}>
                     {/* Contact Info */}
                     <div className={styles.info}>
@@ -98,9 +96,18 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        {/* Map Placeholder */}
+                        {/* Map */}
                         <div className={styles.map}>
-                            <span>Google Map Embed - {branch.name}</span>
+                            <iframe
+                                src={branch.mapSrc}
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title={`Map of ${branch.name}`}
+                            ></iframe>
                         </div>
                     </div>
 
@@ -109,6 +116,15 @@ const Contact = () => {
                         <h2>Book an Appointment</h2>
                         <p className={styles.formSubtitle}>Scheduling for {branch.name}</p>
                         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+
+                            <div className={styles.field}>
+                                <label>Select Location</label>
+                                <select {...register('location', { required: true })}>
+                                    <option value="baramulla">Baramulla Branch</option>
+                                    <option value="kanispora">Kanispora Branch</option>
+                                </select>
+                            </div>
+
                             <div className={styles.field}>
                                 <label>Full Name</label>
                                 <input {...register('name', { required: true })} placeholder="John Doe" />
@@ -117,7 +133,7 @@ const Contact = () => {
 
                             <div className={styles.field}>
                                 <label>Phone Number</label>
-                                <input {...register('phone', { required: true, pattern: /^\\d{10}$/ })} placeholder="9876543210" />
+                                <input {...register('phone', { required: true, pattern: /^[0-9]{10}$/ })} placeholder="9876543210" />
                                 {errors.phone && <span className={styles.error}>Valid 10-digit phone number required</span>}
                             </div>
 

@@ -14,7 +14,7 @@ const Blog = () => {
 
                 <div className={styles.grid}>
                     {blogPosts.map(post => (
-                        <div key={post.id} className={styles.card}>
+                        <Link to={`/blog/${post.slug}`} key={post.id} className={styles.card}>
                             <div className={styles.content}>
                                 <div className={styles.meta}>
                                     <span className={styles.category}><FaTag /> {post.category}</span>
@@ -22,11 +22,11 @@ const Blog = () => {
                                 </div>
                                 <h2 className={styles.postTitle}>{post.title}</h2>
                                 <p className={styles.excerpt}>{post.excerpt}</p>
-                                <Link to={`/blog/${post.slug}`} className={styles.link}>
+                                <span className={styles.link}>
                                     Read Article <FaArrowRight />
-                                </Link>
+                                </span>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

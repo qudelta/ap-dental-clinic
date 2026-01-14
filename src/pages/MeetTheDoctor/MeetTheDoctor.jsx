@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const doctors = [
     {
         name: 'Dr. Gurdev Singh Bali',
+        image: '/images/dr-gurdev-headshot.jpg',
         specialty: 'Orthodontist',
         qualification: 'BDS, MDS - Orthodontics',
         description: 'Lead Orthodontist specializing in invisible aligners and complex malocclusion cases.',
@@ -74,7 +75,11 @@ const MeetTheDoctor = () => {
                             className={styles.doctorCard}
                         >
                             <div className={styles.cardImage}>
-                                <div className={styles.placeholderImage}>{doctor.name}</div>
+                                {doctor.image ? (
+                                    <img src={doctor.image} alt={doctor.name} className={styles.image} />
+                                ) : (
+                                    <div className={styles.placeholderImage}>{doctor.name}</div>
+                                )}
                             </div>
                             <div className={styles.cardContent}>
                                 <span className={styles.specialty}>{doctor.specialty}</span>

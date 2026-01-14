@@ -48,7 +48,7 @@ const Navbar = () => {
     return (
         <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.navContainer}`}>
-                <Link to="/" className={styles.logo}>
+                <Link to="/" className={styles.logo} onClick={() => window.scrollTo(0, 0)}>
                     <img src="/logo-transparent.png" alt="AP Dental" className={styles.logoImg} />
                     <span className={styles.brandText}>AP Dental</span>
                 </Link>

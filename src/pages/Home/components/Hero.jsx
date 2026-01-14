@@ -5,10 +5,7 @@ import styles from './Hero.module.scss';
 const Hero = () => {
     return (
         <section className={styles.hero}>
-            <div className={styles.heroBackground}>
-                <div className={styles.blob}></div>
-                <img src="/logo.svg" alt="" className={styles.backgroundLogo} />
-            </div>
+
 
             <div className={`container ${styles.container}`}>
                 {/* Right Side Visual */}

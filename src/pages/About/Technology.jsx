@@ -32,7 +32,14 @@ const equipment = [
 const Technology = () => {
     return (
         <div className={styles.page}>
-            <div className={styles.hero}>
+            <div
+                className={styles.hero}
+                style={{
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('/images/equipments.jpg')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                }}
+            >
                 <div className="container">
                     <h1>Our Technology</h1>
                     <p>World-class infrastructure for world-class care.</p>

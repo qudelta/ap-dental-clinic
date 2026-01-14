@@ -25,6 +25,8 @@ const services = [
     }
 ];
 
+const MotionLink = motion(Link);
+
 const Services = () => {
     return (
         <section className={styles.section}>
@@ -36,8 +38,9 @@ const Services = () => {
 
                 <div className={styles.grid}>
                     {services.map((service, index) => (
-                        <motion.div
+                        <MotionLink
                             key={index}
+                            to={service.link}
                             initial={{ y: 20 }}
                             whileInView={{ y: 0 }}
                             viewport={{ once: true }}
@@ -46,8 +49,8 @@ const Services = () => {
                         >
                             <h3 className={styles.cardTitle}>{service.title}</h3>
                             <p className={styles.cardDesc}>{service.desc}</p>
-                            <Link to={service.link} className={styles.link}>Learn More</Link>
-                        </motion.div>
+                            <span className={styles.link}>Learn More</span>
+                        </MotionLink>
                     ))}
                 </div>
             </div>

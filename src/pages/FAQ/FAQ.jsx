@@ -62,16 +62,11 @@ const faqData = {
         { q: 'Are dental X-rays safe for children?', a: 'Yes, modern digital X-rays emit very low radiation and are considered safe. We take precautions to minimize exposure.' },
         { q: 'What is a space maintainer?', a: 'A device used to hold space open for a permanent tooth if a baby tooth is lost prematurely.' }
     ],
-    'Insurance & Billing': [
-        { q: 'Do you offer payment plans?', a: 'Yes, we offer flexible payment plans and financing options like CareCredit to help make treatment affordable.' },
-        { q: 'What is a pre-authorization?', a: 'A pre-authorization is a request sent to your insurance company to determine if a specific treatment is covered and how much they will pay.' },
-        { q: 'Why is my bill different from the estimate?', a: 'Estimates are based on information from your insurance. Actual coverage may vary due to deductibles, maximums, or plan changes.' },
-        { q: 'Do you accept Medicaid?', a: 'Please contact our office directly to verify if we are currently participating with your specific state Medicaid plan.' }
-    ]
+
 };
 
 const FAQ = () => {
-    const [activeCategory, setActiveCategory] = useState(Object.keys(faqData)[0]);
+    const [activeCategory, setActiveCategory] = useState('All');
     const [openIndex, setOpenIndex] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -79,10 +74,27 @@ const FAQ = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    const filteredData = faqData[activeCategory].filter(item =>
-        item.q.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.a.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const categories = ['All', ...Object.keys(faqData)];
+
+    const getFilteredData = () => {
+        let data = [];
+        if (activeCategory === 'All') {
+            // Flatten all categories into one array
+            data = Object.values(faqData).flat();
+        } else {
+            data = faqData[activeCategory];
+        }
+
+        if (searchTerm) {
+            data = data.filter(item =>
+                item.q.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                item.a.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+        return data;
+    };
+
+    const filteredData = getFilteredData();
 
     return (
         <div className={styles.faqPage}>
@@ -123,7 +135,7 @@ const FAQ = () => {
 
                 {/* Categories */}
                 <div className={styles.categories}>
-                    {Object.keys(faqData).map((category) => (
+                    {categories.map((category) => (
                         <button
                             key={category}
                             className={activeCategory === category ? styles.active : ''}

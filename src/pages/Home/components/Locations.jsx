@@ -3,7 +3,14 @@ import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaClock } from 'react-icons/fa';
 import styles from './Locations.module.scss';
 
+const mapUrls = {
+    baramulla: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.621215160534!2d74.35874231521404!3d34.15617298057774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e19c0a6a4d7d3b%3A0x6b0a6a4d7d3b!2sBaramulla!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin',
+    kanispora: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d824.792686457586!2d74.40040584051815!3d34.218658389008425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e107bb4fcc5273%3A0xa136762abec2ce06!2sAP%20DENTAL%20CLINIC%2C%20BARAMULLA!5e0!3m2!1sen!2sin!4v1768378130022!5m2!1sen!2sin'
+};
+
 const Locations = () => {
+    const [activeBranch, setActiveBranch] = React.useState('kanispora');
+
     return (
         <section className={styles.locations}>
             <div className="container">
@@ -15,20 +22,24 @@ const Locations = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <h2>Visit Our <span className={styles.highlight}>Clinics</span></h2>
-                    <p>Conveniently located to serve you better.</p>
+                    <p>Conveniently located to serve you better. Click a branch to view on map.</p>
                 </motion.div>
 
                 <div className={styles.grid}>
                     {/* Location Details */}
                     <div className={styles.details}>
                         <motion.div
-                            className={styles.locationCard}
+                            className={`${styles.locationCard} ${activeBranch === 'baramulla' ? styles.active : ''}`}
+                            onClick={() => setActiveBranch('baramulla')}
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            <h3>Baramulla Branch</h3>
+                            <div className={styles.cardHeader}>
+                                <h3>Baramulla Branch</h3>
+                                {activeBranch === 'baramulla' && <span className={styles.badge}>Viewing</span>}
+                            </div>
                             <div className={styles.infoRow}>
                                 <FaMapMarkerAlt className={styles.icon} />
                                 <p>1st Floor, Mint Business Centre,<br />Baramulla, Jammu & Kashmir</p>
@@ -44,13 +55,17 @@ const Locations = () => {
                         </motion.div>
 
                         <motion.div
-                            className={styles.locationCard}
+                            className={`${styles.locationCard} ${activeBranch === 'kanispora' ? styles.active : ''}`}
+                            onClick={() => setActiveBranch('kanispora')}
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            <h3>Kanispora Branch</h3>
+                            <div className={styles.cardHeader}>
+                                <h3>Kanispora Branch</h3>
+                                {activeBranch === 'kanispora' && <span className={styles.badge}>Viewing</span>}
+                            </div>
                             <div className={styles.infoRow}>
                                 <FaMapMarkerAlt className={styles.icon} />
                                 <p>National Highway,<br />Kanispora, Jammu & Kashmir</p>
@@ -74,10 +89,17 @@ const Locations = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <div className={styles.mapPlaceholder}>
-                            <FaMapMarkerAlt className={styles.mapIcon} />
-                            <span>Google Map Embed</span>
-                            <small>Baramulla / Kanispora</small>
+                        <div className={styles.mapWrapper}>
+                            <iframe
+                                src={mapUrls[activeBranch]}
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title={`Map of ${activeBranch} branch`}
+                            ></iframe>
                         </div>
                     </motion.div>
                 </div>

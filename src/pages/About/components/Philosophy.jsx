@@ -1,5 +1,5 @@
 import styles from './Philosophy.module.scss';
-import { FaLeaf, FaBalanceScale, FaMicroscope } from 'react-icons/fa';
+import { FaLeaf, FaBalanceScale, FaMicroscope, FaLightbulb } from 'react-icons/fa';
 
 const Philosophy = () => {
     return (
@@ -24,6 +24,11 @@ const Philosophy = () => {
                         <div className={styles.icon}><FaBalanceScale /></div>
                         <h3>Ethical Planning</h3>
                         <p>We never upsell. You get a transparent breakdown of what you need, what represents value, and what can wait.</p>
+                    </div>
+                    <div className={styles.card}>
+                        <div className={styles.icon}><FaLightbulb /></div>
+                        <h3>Patient Education</h3>
+                        <p>We believe an informed patient is a healthier patient. We take time to explain your oral health so you can make confident decisions.</p>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,20 @@
 import { useState } from 'react';
 import styles from './Gallery.module.scss';
 
-const clinicPhotos = [1, 2, 3, 4, 5, 6]; // Placeholders
-const casesPhotos = [1, 2, 3, 4]; // Placeholders
+const clinicPhotos = [
+    '/images/clinic-exterior.jpg',
+    '/images/waiting-area.jpg',
+    '/images/consultation-room.jpg',
+    '/images/consultation-room-2.jpg',
+    '/images/books-and-magazines.jpg',
+    '/images/equipments.jpg'
+];
+const casesPhotos = [
+    '/images/smile-story-1.jpg',
+    '/images/smile-story-2.jpg',
+    '/images/smile-story-3.jpg',
+    '/images/smile-story-4.jpg'
+];
 
 const Gallery = () => {
     const [activeTab, setActiveTab] = useState('clinic');
@@ -29,15 +41,15 @@ const Gallery = () => {
 
                 <div className={styles.grid}>
                     {activeTab === 'clinic' ? (
-                        clinicPhotos.map(i => (
-                            <div key={i} className={styles.item}>
-                                <div className={styles.placeholder}>Clinic Photo {i}</div>
+                        clinicPhotos.map((src, index) => (
+                            <div key={index} className={styles.item}>
+                                <img src={src} alt={`Clinic Photo ${index + 1}`} className={styles.image} />
                             </div>
                         ))
                     ) : (
-                        casesPhotos.map(i => (
-                            <div key={i} className={styles.item}>
-                                <div className={styles.placeholder}>Before / After Case {i}</div>
+                        casesPhotos.map((src, index) => (
+                            <div key={index} className={styles.item}>
+                                <img src={src} alt={`Smile Story ${index + 1}`} className={styles.image} />
                             </div>
                         ))
                     )}

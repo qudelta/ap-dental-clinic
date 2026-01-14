@@ -3,24 +3,20 @@ import styles from './BeforeAfter.module.scss';
 
 const results = [
     {
-        name: 'Before & After - Case 1',
-        treatment: 'Orthodontics',
-        imagePlaceholder: 'Before/After Braces Treatment'
+        name: 'Transformation Case 1',
+        image: '/images/smile-story-1.jpg'
     },
     {
-        name: 'Before & After - Case 2',
-        treatment: 'Teeth Whitening',
-        imagePlaceholder: 'Before/After Whitening'
+        name: 'Transformation Case 2',
+        image: '/images/smile-story-2.jpg'
     },
     {
-        name: 'Before & After - Case 3',
-        treatment: 'Smile Makeover',
-        imagePlaceholder: 'Before/After Smile Design'
+        name: 'Transformation Case 3',
+        image: '/images/smile-story-3.jpg'
     },
     {
-        name: 'Before & After - Case 4',
-        treatment: 'Dental Implants',
-        imagePlaceholder: 'Before/After Implants'
+        name: 'Transformation Case 4',
+        image: '/images/smile-story-4.jpg'
     }
 ];
 
@@ -61,16 +57,14 @@ const BeforeAfter = () => {
                             whileHover={{ y: -5 }}
                         >
                             <div className={styles.imageWrapper}>
-                                <div className={styles.placeholder}>
-                                    {result.imagePlaceholder}
-                                    <span className={styles.placeholderHint}>
-                                        Upload your before/after image here
-                                    </span>
-                                </div>
+                                <img
+                                    src={result.image}
+                                    alt={result.name}
+                                    className={styles.image}
+                                />
                             </div>
                             <div className={styles.info}>
-                                <h3 className={styles.treatment}>{result.treatment}</h3>
-                                <p className={styles.caption}>{result.name}</p>
+                                <p className={styles.caption} style={{ fontSize: '1.1rem', fontWeight: '600', color: '#111' }}>{result.name}</p>
                             </div>
                         </motion.div>
                     ))}

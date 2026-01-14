@@ -3,10 +3,12 @@ import styles from './ClinicEnvironment.module.scss';
 import { Link } from 'react-router-dom';
 
 const photos = [
-    { label: 'Reception Desk', delay: 0 },
-    { label: 'Consultation Room', delay: 0.1 },
-    { label: 'Patient Waiting Area', delay: 0.2 },
-    { label: 'Clinic Exterior', delay: 0.3 },
+    { label: 'Waiting Area', delay: 0, src: '/images/waiting-area.jpg' },
+    { label: 'Consultation Room', delay: 0.1, src: '/images/consultation-room.jpg' },
+    { label: 'Modern Equipment', delay: 0.2, src: '/images/equipments.jpg' },
+    { label: 'Advanced Diagnostics', delay: 0.25, src: '/images/consultation-room-2.jpg' },
+    { label: 'Patient Comfort', delay: 0.3, src: '/images/books-and-magazines.jpg' },
+    { label: 'Clinic Exterior', delay: 0.35, src: '/images/clinic-exterior.jpg' },
 ];
 
 const ClinicEnvironment = () => {
@@ -28,9 +30,7 @@ const ClinicEnvironment = () => {
                             viewport={{ once: true }}
                             transition={{ delay: photo.delay, duration: 0.4 }}
                         >
-                            <div className={styles.placeholder}>
-                                {photo.label}
-                            </div>
+                            <img src={photo.src} alt={photo.label} className={styles.image} />
                             <div className={styles.caption}>{photo.label}</div>
                         </motion.div>
                     ))}

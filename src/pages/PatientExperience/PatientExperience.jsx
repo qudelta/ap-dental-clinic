@@ -2,7 +2,7 @@ import styles from './PatientExperience.module.scss';
 import {
     FaCalendarCheck, FaUserMd, FaSmileBeam, FaCoffee, FaWifi,
     FaTv, FaMusic, FaXRay, FaLaptopMedical, FaShieldAlt,
-    FaCreditCard, FaFileAlt, FaClipboardCheck
+    FaCreditCard, FaFileAlt, FaClipboardCheck, FaTint
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
@@ -15,8 +15,8 @@ const PatientExperience = () => {
         },
         {
             icon: <FaFileAlt />,
-            title: '02. Complete Patient Forms',
-            description: 'Fill out your medical history and insurance information online before your visit to save time.'
+            title: '02. Reception & Registration',
+            description: 'Arrive at our clinic where our friendly reception team will assist you with registration.'
         },
         {
             icon: <FaUserMd />,
@@ -32,6 +32,11 @@ const PatientExperience = () => {
             icon: <FaSmileBeam />,
             title: '05. Begin Your Journey',
             description: 'Start treatment immediately or schedule your next appointment. We work at your pace.'
+        },
+        {
+            icon: <FaShieldAlt />,
+            title: '06. Post-Treatment Care',
+            description: 'Regular check-ups and maintenance to ensure your smile stays healthy and beautiful.'
         }
     ];
 
@@ -39,7 +44,7 @@ const PatientExperience = () => {
         { icon: <FaWifi />, title: 'Free WiFi', description: 'Stay connected in our waiting area' },
         { icon: <FaTv />, title: 'Entertainment', description: 'TV and magazines to help you relax' },
         { icon: <FaSmileBeam />, title: 'Ergonomic Chairs', description: 'Designed for your ultimate comfort during treatment' },
-        { icon: <FaShieldAlt />, title: 'Proper Sitting Area', description: 'Spacious and comfortable seating for you and your family' }
+        { icon: <FaTint />, title: 'Clean Drinking Water', description: 'Purified water available for your refreshment' }
     ];
 
     const techFeatures = [
@@ -76,7 +81,14 @@ const PatientExperience = () => {
     return (
         <div className={styles.page}>
             {/* Hero Section */}
-            <div className={styles.hero}>
+            <div
+                className={styles.hero}
+                style={{
+                    backgroundImage: `linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.9)), url('/images/waiting-area.jpg')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                }}
+            >
                 <div className="container">
                     <motion.h1
                         initial={{ y: 20 }}

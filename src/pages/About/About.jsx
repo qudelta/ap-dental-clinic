@@ -7,8 +7,8 @@ const About = () => {
     return (
         <div className="page-about">
             {/* Optional Page Header could go here */}
-            <div style={{ paddingTop: '4rem', textAlign: 'center', backgroundColor: '#F8F9FA', paddingBottom: '4rem' }}>
-                <h1 className="text-primary" style={{ fontSize: '3rem' }}>About AP Dental</h1>
+            <div style={{ paddingTop: '8rem', textAlign: 'center', backgroundColor: '#F8F9FA', paddingBottom: '4rem' }}>
+                <h1 className="text-primary" style={{ fontSize: '3rem' }}>Our Story</h1>
                 <p>Excellence in Orthodontics & Family Dentistry</p>
             </div>
             <Story />

@@ -54,6 +54,9 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    display: block; // Ensure link behaves as block
+    color: inherit;
 
     @media (min-width: $tablet) {
         padding: 2.5rem;

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -18,9 +18,8 @@ const Footer = () => {
                             AP Dental Clinic - A premier orthodontic and dental care center providing specialized treatments in a calm, ethical environment.
                         </p>
                         <div className={styles.socials}>
-                            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-                            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-                            <a href="#" aria-label="Twitter"><FaTwitter /></a>
+                            <a href="https://www.instagram.com/apdental_clinic/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+                            <a href="https://wa.me/919541848030" aria-label="WhatsApp"><FaWhatsapp /></a>
                         </div>
                     </div>
 
