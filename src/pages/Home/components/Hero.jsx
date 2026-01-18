@@ -8,20 +8,6 @@ const Hero = () => {
 
 
             <div className={`container ${styles.container}`}>
-                {/* Right Side Visual */}
-                <div className={styles.heroVisual}>
-                    <div className={styles.pLogoContainer}>
-                        <motion.img
-                            src="/logo-transparent.png"
-                            alt="AP Dental Logo"
-                            className={styles.pLogo}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                        />
-                    </div>
-                </div>
-
                 <div className={styles.content}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -30,7 +16,7 @@ const Hero = () => {
                     >
                         <h1 className={styles.mainTitle}>
                             Redefining Your <br />
-                            <span className={styles.highlight}>Smile Journey.</span>
+                            <span className={styles.highlightBlue}>Smile</span> <span className={styles.highlightYellow}>Journey.</span>
                         </h1>
 
                         <p className={styles.subtitle}>
@@ -40,7 +26,7 @@ const Hero = () => {
 
                         <div className={styles.actions}>
                             <Link to="/contact" className="btn btn-primary">Book Consultation</Link>
-                            <Link to="/doctor" className="btn btn-outline">Meet Our Team</Link>
+                            <Link to="/doctor" className="btn btn-outline">Meet Our Specialists</Link>
                         </div>
                     </motion.div>
                 </div>

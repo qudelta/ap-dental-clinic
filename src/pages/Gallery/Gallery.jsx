@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './Gallery.module.scss';
 
+
 const clinicPhotos = [
     '/images/clinic-exterior.jpg',
     '/images/waiting-area.jpg',
@@ -19,11 +20,26 @@ const casesPhotos = [
 const Gallery = () => {
     const [activeTab, setActiveTab] = useState('clinic');
 
+    const kanisporaPhotos = [
+        '/images/gallery/kanispora/IMG_3860.webp',
+        '/images/gallery/kanispora/IMG_3861.webp',
+        '/images/gallery/kanispora/IMG_3862.webp',
+        '/images/gallery/kanispora/IMG_3863.webp',
+        '/images/gallery/kanispora/IMG_3864.webp',
+        '/images/gallery/kanispora/IMG_3865.webp',
+        '/images/gallery/kanispora/IMG_3866.webp',
+        '/images/gallery/kanispora/IMG_3867.webp',
+        '/images/gallery/kanispora/IMG_3868.webp',
+        '/images/gallery/kanispora/IMG_3869.webp'
+    ];
+
     return (
         <div className={styles.page}>
             <div className="container">
-                <h1 className={styles.title}>Gallery</h1>
-
+                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                    <h1 className="text-primary" style={{ fontSize: '2.5rem', fontFamily: 'Libre Baskerville, serif', marginBottom: '1rem' }}>Gallery</h1>
+                    <p style={{ color: '#64748b' }}>A glimpse into our world</p>
+                </div>
                 <div className={styles.tabs}>
                     <button
                         className={`${styles.tab} ${activeTab === 'clinic' ? styles.active : ''}`}
@@ -37,19 +53,33 @@ const Gallery = () => {
                     >
                         Smile Stories (Cases)
                     </button>
+                    <button
+                        className={`${styles.tab} ${activeTab === 'kanispora' ? styles.active : ''}`}
+                        onClick={() => setActiveTab('kanispora')}
+                    >
+                        Kanispora Branch
+                    </button>
                 </div>
 
                 <div className={styles.grid}>
-                    {activeTab === 'clinic' ? (
+                    {activeTab === 'clinic' && (
                         clinicPhotos.map((src, index) => (
                             <div key={index} className={styles.item}>
                                 <img src={src} alt={`Clinic Photo ${index + 1}`} className={styles.image} />
                             </div>
                         ))
-                    ) : (
+                    )}
+                    {activeTab === 'cases' && (
                         casesPhotos.map((src, index) => (
                             <div key={index} className={styles.item}>
                                 <img src={src} alt={`Smile Story ${index + 1}`} className={styles.image} />
+                            </div>
+                        ))
+                    )}
+                    {activeTab === 'kanispora' && (
+                        kanisporaPhotos.map((src, index) => (
+                            <div key={index} className={styles.item}>
+                                <img src={src} alt={`Kanispora Branch ${index + 1}`} className={styles.image} />
                             </div>
                         ))
                     )}

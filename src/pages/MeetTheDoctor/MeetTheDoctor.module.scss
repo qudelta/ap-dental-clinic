@@ -117,6 +117,8 @@
 .cardImage {
     height: 200px;
     background: linear-gradient(135deg, $secondary-color, color.scale($secondary-color, $lightness: -52.5773%));
+    overflow: hidden; // Clips the zoomed image so it doesn't overlap text
+    position: relative;
 
     @media (min-width: $desktop) {
         height: 180px;
@@ -226,14 +228,15 @@
 }
 
 .number {
-    font-family: $font-heading;
+    // Use standard sans-serif font instead of heading font
+    font-family: inherit;
     font-size: 3rem;
-    color: $accent-color;
+    color: $white; // Changed from accent-color to white
     font-weight: 700;
     margin-bottom: 0.5rem;
 
     @media (min-width: $tablet) {
-        font-size: 4rem;
+        font-size: 3.5rem; // Slightly smaller than 4rem for less aggression
     }
 }
 

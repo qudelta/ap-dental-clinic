@@ -19,11 +19,13 @@ const BlogPost = () => {
     return (
         <div className={styles.page}>
             <div className={`container ${styles.container}`}>
-                <Link to="/blog" className={styles.backLink}>
-                    <FaArrowLeft /> Back to Articles
-                </Link>
+                <Link to="/blog" className={styles.backLink}>&larr; Back to Blog</Link>
 
                 <article className={styles.article}>
+                    {post.image && (
+                        <img src={post.image} alt={post.title} className={styles.bannerImage} />
+                    )}
+
                     <header className={styles.header}>
                         <div className={styles.meta}>
                             <span className={styles.category}><FaTag /> {post.category}</span>

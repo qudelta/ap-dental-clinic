@@ -15,6 +15,9 @@ const Blog = () => {
                 <div className={styles.grid}>
                     {blogPosts.map(post => (
                         <Link to={`/blog/${post.slug}`} key={post.id} className={styles.card}>
+                            <div className={styles.imageWrapper}>
+                                <img src={post.image} alt={post.title} className={styles.image} />
+                            </div>
                             <div className={styles.content}>
                                 <div className={styles.meta}>
                                     <span className={styles.category}><FaTag /> {post.category}</span>

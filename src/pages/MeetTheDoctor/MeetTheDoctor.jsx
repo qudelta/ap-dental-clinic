@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 const doctors = [
     {
         name: 'Dr. Gurdev Singh Bali',
-        image: '/images/dr-gurdev-headshot.jpg',
+        image: '/images/dr-gurdev-bali.jpg',
         specialty: 'Orthodontist',
         qualification: 'BDS, MDS - Orthodontics',
         description: 'Lead Orthodontist specializing in invisible aligners and complex malocclusion cases.',
-        experience: '14+ years'
+        experience: '14+ years',
+        imageStyle: { objectPosition: 'top center', transform: 'scale(1.25)', transformOrigin: '50% 20%' }
     },
     {
         name: 'Dr. Junaid',
@@ -41,25 +42,13 @@ const doctors = [
     }
 ];
 
+
+
 const MeetTheDoctor = () => {
     return (
         <div className={styles.page}>
             {/* Hero Section */}
-            <section className={styles.hero}>
-                <div className="container">
-                    <div className={styles.heroContent}>
-                        <span className={styles.subtitle}>Meet Our Expert Team</span>
-                        <h1>Your Smile, Our Passion</h1>
-                        <p className={styles.heroText}>
-                            Our specialists are graduates from the prestigious<br />
-                            <strong>Government Dental College, Srinagar</strong>
-                        </p>
-                        <div className={styles.actions}>
-                            <Link to="/contact" className="btn btn-primary">Book Consultation</Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             {/* Team Grid Section */}
             <section className={`container ${styles.teamSection}`}>
@@ -76,7 +65,7 @@ const MeetTheDoctor = () => {
                         >
                             <div className={styles.cardImage}>
                                 {doctor.image ? (
-                                    <img src={doctor.image} alt={doctor.name} className={styles.image} />
+                                    <img src={doctor.image} alt={doctor.name} className={styles.image} style={doctor.imageStyle || {}} />
                                 ) : (
                                     <div className={styles.placeholderImage}>{doctor.name}</div>
                                 )}
@@ -100,20 +89,20 @@ const MeetTheDoctor = () => {
                 <div className="container">
                     <div className={styles.statsGrid}>
                         <div className={styles.statItem}>
+                            <span className={styles.number}>2019</span>
+                            <span className={styles.label}>Established</span>
+                        </div>
+                        <div className={styles.statItem}>
                             <span className={styles.number}>5</span>
-                            <span className={styles.label}>Specialist Doctors</span>
+                            <span className={styles.label}>Dental Specialists</span>
                         </div>
                         <div className={styles.statItem}>
-                            <span className={styles.number}>50+</span>
-                            <span className={styles.label}>Years Combined Experience</span>
+                            <span className={styles.number}>2</span>
+                            <span className={styles.label}>Clinic Support Staff</span>
                         </div>
                         <div className={styles.statItem}>
-                            <span className={styles.number}>10,000+</span>
-                            <span className={styles.label}>Happy Patients</span>
-                        </div>
-                        <div className={styles.statItem}>
-                            <span className={styles.number}>100%</span>
-                            <span className={styles.label}>Qualified Team</span>
+                            <span className={styles.number}>6</span>
+                            <span className={styles.label}>Days Open</span>
                         </div>
                     </div>
                 </div>

@@ -29,7 +29,11 @@ const branches = {
 
 
 
+
+
 const Contact = () => {
+    // ... hook logic ...
+
     const { register, handleSubmit, watch, formState: { errors, isSubmitting }, reset } = useForm({
         defaultValues: {
             location: 'baramulla'
@@ -55,13 +59,14 @@ const Contact = () => {
         reset();
     };
 
+
     return (
         <div className={styles.page}>
             <div className="container">
                 <div className={styles.grid}>
                     {/* Contact Info */}
                     <div className={styles.info}>
-                        <h1 className={styles.title}>Get in Touch</h1>
+                        <h1 className={styles.title} style={{ marginBottom: '1rem', color: '#0a192f', fontFamily: 'Libre Baskerville, serif' }}>Get in Touch</h1>
                         <p className={styles.subtitle}>Visit us at our {branch.name}</p>
 
                         <div className={styles.details}>

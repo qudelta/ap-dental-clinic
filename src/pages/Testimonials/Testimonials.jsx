@@ -3,6 +3,7 @@ import { FaQuoteLeft, FaStar } from 'react-icons/fa';
 import styles from './Testimonials.module.scss';
 import { motion } from 'framer-motion';
 
+
 const reviews = [
     { id: 1, name: 'Lone Nizu', treatment: 'Braces Treatment', text: 'I had my braces treatment at AP Dental with Dr. Gurudev Singh, and I am very happy with the results. The before and after difference is clearly visible, and my smile has improved a lot compared to before.', category: 'ortho' },
     { id: 2, name: 'Tanveen Tariq', treatment: 'Patient Experience', text: 'I had a wonderful experience at this clinic. The ambience is very clean, modern, and calming, which immediately puts you at ease. The doctor is highly professional, explains every step clearly, and ensures you are comfortable throughout.', category: 'general' },
@@ -32,23 +33,9 @@ const Testimonials = () => {
         <div className={styles.page}>
             <div className="container">
                 <div className={styles.header}>
-                    <motion.h1
-                        className={styles.title}
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                    >
-                        Patient Stories
-                    </motion.h1>
-                    <motion.p
-                        className={styles.subtitle}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                    >
-                        Read what our patients have to say about their experience with us.
-                    </motion.p>
+                    <h1 className={styles.title}>Patient Stories</h1>
+                    <p className={styles.subtitle}>Read what our patients have to say about their experience with us.</p>
                 </div>
-
                 <div className={styles.filters}>
                     <button className={`${styles.filterBtn} ${filter === 'all' ? styles.active : ''}`} onClick={() => setFilter('all')}>All</button>
                     <button className={`${styles.filterBtn} ${filter === 'ortho' ? styles.active : ''}`} onClick={() => setFilter('ortho')}>Orthodontics</button>

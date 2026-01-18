@@ -87,7 +87,7 @@ const Navbar = () => {
                         <NavLink to="/faq" className={({ isActive }) => isActive ? styles.active : ''}>FAQ</NavLink>
                         <NavLink to="/testimonials" className={({ isActive }) => isActive ? styles.active : ''}>Stories</NavLink>
                         <NavLink to="/blog" className={({ isActive }) => isActive ? styles.active : ''}>Blog</NavLink>
-                        <NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ''}>About</NavLink>
+                        <NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ''}>Our Story</NavLink>
                     </div>
 
                     <div className={styles.ctas}>
@@ -122,7 +122,7 @@ const Navbar = () => {
                             <NavLink to="/faq" onClick={closeMenu}>FAQ</NavLink>
                             <NavLink to="/testimonials" onClick={closeMenu}>Stories</NavLink>
                             <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
-                            <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+                            <NavLink to="/about" onClick={closeMenu}>Our Story</NavLink>
 
                             <NavLink to="/contact" onClick={closeMenu} className={`${styles.mobileBookBtn} btn btn-primary`}>
                                 Book Consultation

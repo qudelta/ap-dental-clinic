@@ -83,11 +83,6 @@ const PatientExperience = () => {
             {/* Hero Section */}
             <div
                 className={styles.hero}
-                style={{
-                    backgroundImage: `linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.9)), url('/images/waiting-area.jpg')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}
             >
                 <div className="container">
                     <motion.h1

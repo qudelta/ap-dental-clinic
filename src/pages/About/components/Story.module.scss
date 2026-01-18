@@ -1,11 +1,14 @@
 @use '@/styles/variables' as *;
 
 .section {
-    padding: 3rem 0;
-    background-color: $white;
+    padding: 5rem 0;
+    // Subtle gradient to make it distinct from plain white
+    background: linear-gradient(135deg, #f8f9fa 0%, #edf2f7 100%);
+    position: relative;
+    overflow: hidden;
 
     @media (min-width: $tablet) {
-        padding: 6rem 0;
+        padding: 8rem 0;
     }
 }
 
@@ -65,13 +68,18 @@
 }
 
 .image {
-    height: 250px;
-    border-radius: 12px;
+    height: 300px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); // Deeper premium shadow
+    transition: transform 0.5s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 
     @media (min-width: $tablet) {
-        height: 400px;
+        height: 450px;
     }
 }
 

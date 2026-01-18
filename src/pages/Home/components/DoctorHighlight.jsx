@@ -14,10 +14,11 @@ const DoctorHighlight = () => {
                     transition={{ duration: 0.6 }}
                     className={styles.imageWrapper}
                 >
-                    <div className={styles.imagePlaceholder}>
-                        <FaUserMd className={styles.placeholderIcon} />
-                        <span>Our Expert Team</span>
-                    </div>
+                    <img
+                        src="/images/our-team.jpg"
+                        alt="AP Dental Team"
+                        className={styles.image}
+                    />
                 </motion.div>
 
                 <motion.div
