@@ -47,16 +47,15 @@ const Orthodontics = () => {
                                 <p>A modern alternative to brackets and wires. Invisalign uses a series of custom-made, clear, removable aligners to gradually shift your teeth. They are virtually invisible and allow you to eat and brush normally.</p>
                             </div>
                         </div>
-                </div>
-            </section>
+                    </section>
 
-            <div className={styles.cta}>
-                <h3>Ready to transform your smile?</h3>
-                <Link to="/contact" className="btn btn-primary">Book an Orthodontic Consultation</Link>
+                    <div className={styles.cta}>
+                        <h3>Ready to transform your smile?</h3>
+                        <Link to="/contact" className="btn btn-primary">Book an Orthodontic Consultation</Link>
+                    </div>
+                </div>
             </div>
         </div>
-            </div >
-        </div >
     );
 };
 

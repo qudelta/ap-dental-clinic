@@ -38,16 +38,15 @@ const PreventiveCare = () => {
                                 <p>Topical fluoride applications strengthen tooth enamel, making it more resistant to acid attacks from plaque bacteria and sugars in the mouth.</p>
                             </div>
                         </div>
-                </div>
-            </section>
+                    </section>
 
-            <div className={styles.cta}>
-                <h3>Protect your family's oral health</h3>
-                <Link to="/contact" className="btn btn-primary">Book a Checkup</Link>
+                    <div className={styles.cta}>
+                        <h3>Protect your family's oral health</h3>
+                        <Link to="/contact" className="btn btn-primary">Book a Checkup</Link>
+                    </div>
+                </div>
             </div>
         </div>
-            </div >
-        </div >
     );
 };
 
