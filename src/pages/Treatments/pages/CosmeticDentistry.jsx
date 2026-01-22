@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CosmeticDentistry = () => {
     return (
         <div className={styles.page}>
-            <div className={styles.hero}>
+            <div className={styles.hero} style={{ backgroundImage: "linear-gradient(rgba(14, 184, 246, 0.8), rgba(0, 78, 146, 0.85)), url('/images/treatments/cosmetic-hero.webp')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="container">
                     <span className={styles.label}>Treatments</span>
                     <h1>Cosmetic Dentistry</h1>
@@ -22,19 +22,24 @@ const CosmeticDentistry = () => {
                     <section className={styles.section}>
                         <h2>Our Services</h2>
 
-                        <div className={styles.card}>
-                            <h3>Digital Smile Design (DSD)</h3>
-                            <p>We use advanced imaging software to plan your new smile before we even touch a tooth. You can see a simulation of your final result, ensuring it matches your facial features perfectly.</p>
-                        </div>
+                        <div className={styles.grid}>
+                            <div className={styles.card}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/treatments/digital-smile-design.webp" alt="Digital Smile Design" className={styles.cardImage} />
+                                </div>
+                                <h3>Digital Smile Design (DSD)</h3>
+                                <p>We use advanced imaging software to plan your new smile before we even touch a tooth. You can see a simulation of your final result, ensuring it matches your facial features perfectly.</p>
+                            </div>
 
-                        <div className={styles.card}>
-                            <h3>Ceramic Veneers</h3>
-                            <p>Thin, custom-made shells of porcelain designed to cover the front surface of teeth. They effectively mask discoloration, chips, gaps, or minor misalignment.</p>
-                        </div>
+                            <div className={styles.card}>
+                                <h3>Ceramic Veneers</h3>
+                                <p>Thin, custom-made shells of porcelain designed to cover the front surface of teeth. They effectively mask discoloration, chips, gaps, or minor misalignment.</p>
+                            </div>
 
-                        <div className={styles.card}>
-                            <h3>Teeth Whitening</h3>
-                            <p>Professional in-office whitening can brighten your smile by several shades in just one hour. It's safe, effective, and tailored to your sensitivity levels.</p>
+                            <div className={styles.card}>
+                                <h3>Teeth Whitening</h3>
+                                <p>Professional in-office whitening can brighten your smile by several shades in just one hour. It's safe, effective, and tailored to your sensitivity levels.</p>
+                            </div>
                         </div>
                     </section>
 

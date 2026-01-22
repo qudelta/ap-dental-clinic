@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Orthodontics = () => {
     return (
         <div className={styles.page}>
-            <div className={styles.hero}>
+            <div className={styles.hero} style={{ backgroundImage: "linear-gradient(rgba(14, 184, 246, 0.8), rgba(0, 78, 146, 0.85)), url('/images/treatments/ortho-hero.webp')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="container">
                     <span className={styles.label}>Treatments</span>
                     <h1>Orthodontics</h1>
@@ -22,29 +22,41 @@ const Orthodontics = () => {
                     <section className={styles.section}>
                         <h2>Our Solutions</h2>
 
-                        <div className={styles.card}>
-                            <h3>Metal Braces</h3>
-                            <p>The traditional and most versatile option. Modern metal braces are smaller and more comfortable than ever. They are highly effective for correcting severe crowding and complex bite issues.</p>
-                        </div>
+                        <div className={styles.grid}>
+                            <div className={styles.card}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/treatments/metal-braces.webp" alt="Metal Braces" className={styles.cardImage} />
+                                </div>
+                                <h3>Metal Braces</h3>
+                                <p>The traditional and most versatile option. Modern metal braces are smaller and more comfortable than ever. They are highly effective for correcting severe crowding and complex bite issues.</p>
+                            </div>
 
-                        <div className={styles.card}>
-                            <h3>Ceramic (Clear) Braces</h3>
-                            <p>These function like metal braces but are made of clear or tooth-colored ceramic material. They blend in with your teeth, making them a less noticeable option for adults and teens.</p>
-                        </div>
+                            <div className={styles.card}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/treatments/ceramic-braces.webp" alt="Ceramic Braces" className={styles.cardImage} />
+                                </div>
+                                <h3>Ceramic (Clear) Braces</h3>
+                                <p>These function like metal braces but are made of clear or tooth-colored ceramic material. They blend in with your teeth, making them a less noticeable option for adults and teens.</p>
+                            </div>
 
-                        <div className={styles.card}>
-                            <h3>Invisalign (Clear Aligners)</h3>
-                            <p>A modern alternative to brackets and wires. Invisalign uses a series of custom-made, clear, removable aligners to gradually shift your teeth. They are virtually invisible and allow you to eat and brush normally.</p>
+                            <div className={styles.card}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/treatments/invisalign.webp" alt="Invisalign" className={styles.cardImage} />
+                                </div>
+                                <h3>Invisalign (Clear Aligners)</h3>
+                                <p>A modern alternative to brackets and wires. Invisalign uses a series of custom-made, clear, removable aligners to gradually shift your teeth. They are virtually invisible and allow you to eat and brush normally.</p>
+                            </div>
                         </div>
-                    </section>
-
-                    <div className={styles.cta}>
-                        <h3>Ready to transform your smile?</h3>
-                        <Link to="/contact" className="btn btn-primary">Book an Orthodontic Consultation</Link>
-                    </div>
                 </div>
+            </section>
+
+            <div className={styles.cta}>
+                <h3>Ready to transform your smile?</h3>
+                <Link to="/contact" className="btn btn-primary">Book an Orthodontic Consultation</Link>
             </div>
         </div>
+            </div >
+        </div >
     );
 };
 

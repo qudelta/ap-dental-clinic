@@ -1,11 +1,13 @@
 @use '@/styles/variables' as *;
 
 .page {
+    padding-top: 8rem; // Account for fixed navbar
     padding-bottom: 3rem;
     background-color: $white;
     min-height: 80vh;
 
     @media (min-width: $tablet) {
+        padding-top: 10rem;
         padding-bottom: 6rem;
     }
 }

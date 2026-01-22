@@ -11,8 +11,8 @@ const branches = {
         location: 'Baramulla, Jammu & Kashmir',
         phone: '+91 95418 48030',
         email: 'appointments@apdental.com',
-        hours: 'Mon - Sat: 10:00 AM - 8:00 PM',
-        subHours: 'Sun: Closed',
+        hours: 'Sat - Thu: 10:00 AM - 6:00 PM',
+        subHours: 'Fri: Closed',
         mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.621215160534!2d74.35874231521404!3d34.15617298057774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e19c0a6a4d7d3b%3A0x6b0a6a4d7d3b!2sBaramulla!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin' // Placeholder/Approx for Baramulla
     },
     kanispora: {
@@ -21,8 +21,8 @@ const branches = {
         location: 'Kanispora, Jammu & Kashmir',
         phone: '+91 95418 48030',
         email: 'appointments@apdental.com',
-        hours: 'Mon - Sat: 10:00 AM - 8:00 PM',
-        subHours: 'Sun: Closed',
+        hours: 'Sat - Thu: 10:00 AM - 6:00 PM',
+        subHours: 'Fri: Closed',
         mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d824.792686457586!2d74.40040584051815!3d34.218658389008425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e107bb4fcc5273%3A0xa136762abec2ce06!2sAP%20DENTAL%20CLINIC%2C%20BARAMULLA!5e0!3m2!1sen!2sin!4v1768378130022!5m2!1sen!2sin'
     }
 };
@@ -82,7 +82,7 @@ const Contact = () => {
                                 <div>
                                     <h3>Phone</h3>
                                     <p>{branch.phone}</p>
-                                    <p className={styles.subtext}>Mon-Sat, 10am - 8pm</p>
+                                    <p className={styles.subtext}>Sat - Thu, 10am - 6pm</p>
                                 </div>
                             </div>
                             <div className={styles.item}>

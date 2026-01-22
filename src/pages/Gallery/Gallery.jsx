@@ -11,10 +11,10 @@ const clinicPhotos = [
     '/images/equipments.jpg'
 ];
 const casesPhotos = [
-    '/images/smile-story-1.jpg',
-    '/images/smile-story-2.jpg',
-    '/images/smile-story-3.jpg',
-    '/images/smile-story-4.jpg'
+    '/images/smile-story-1.webp',
+    '/images/smile-story-2.webp',
+    '/images/smile-story-3.webp',
+    '/images/smile-story-4.webp'
 ];
 
 const Gallery = () => {

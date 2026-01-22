@@ -3,20 +3,20 @@ import styles from './BeforeAfter.module.scss';
 
 const results = [
     {
-        name: 'Transformation Case 1',
-        image: '/images/smile-story-1.jpg'
+        name: 'Total Smile Makeover',
+        image: '/images/smile-story-1.webp'
     },
     {
-        name: 'Transformation Case 2',
-        image: '/images/smile-story-2.jpg'
+        name: 'Orthodontic Excellence',
+        image: '/images/smile-story-2.webp'
     },
     {
-        name: 'Transformation Case 3',
-        image: '/images/smile-story-3.jpg'
+        name: 'Teen Confidence',
+        image: '/images/smile-story-3.webp'
     },
     {
-        name: 'Transformation Case 4',
-        image: '/images/smile-story-4.jpg'
+        name: 'Seamless Gap Closure',
+        image: '/images/smile-story-4.webp'
     }
 ];
 

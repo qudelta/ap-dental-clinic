@@ -99,15 +99,52 @@
     border-radius: 12px;
     margin-bottom: 2rem;
     border-left: 4px solid $primary-color;
+    overflow: hidden; // Ensure image stays within border radius
+    padding: 0; // Remove padding from card to let image sit flush on top
 
-    h3 {
-        margin-bottom: 0.5rem;
-        color: $text-dark;
+    // Restore padding for content
+    >h3,
+    >p {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
-    p {
-        margin-bottom: 0;
-        font-size: 1rem;
+    >h3 {
+        padding-top: 1.5rem;
+    }
+
+    >p {
+        padding-bottom: 2rem;
+    }
+}
+
+.cardImageWrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+    .card:hover & {
+        transform: scale(1.05);
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media (min-width: $tablet) {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

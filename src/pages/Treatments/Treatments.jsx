@@ -9,28 +9,28 @@ const treatments = [
         title: 'Orthodontics',
         desc: 'Alignment solutions including Braces & Invisalign.',
         icon: <FaTeethOpen />,
-        image: '/images/orthodontics.png'
+        image: '/images/treatments/orthodontics.webp'
     },
     {
         path: '/treatments/general',
         title: 'General Dentistry',
         desc: 'RCT, Fillings, and comprehensive oral care.',
         icon: <FaTooth />,
-        image: '/images/general.png'
+        image: '/images/treatments/general.webp'
     },
     {
         path: '/treatments/cosmetic',
         title: 'Cosmetic Dentistry',
         desc: 'Veneers, Whitening, and Smile Design.',
         icon: <FaMagic />,
-        image: '/images/cosmetic.png'
+        image: '/images/treatments/cosmetic.webp'
     },
     {
         path: '/treatments/preventive',
         title: 'Preventive Care',
         desc: 'Hygiene, cleanings, and sealants.',
         icon: <FaShieldAlt />,
-        image: '/images/preventive.png'
+        image: '/images/treatments/preventive.webp'
     }
 ];
 

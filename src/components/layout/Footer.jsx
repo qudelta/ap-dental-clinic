@@ -67,7 +67,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <FaClock className={styles.icon} />
-                                <span>Mon - Sat: 10AM - 8PM<br />Sun: Closed</span>
+                                <span>Sat - Thu: 10AM - 6PM<br />Fri: Closed</span>
                             </li>
                         </ul>
                     </div>
