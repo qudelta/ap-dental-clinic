@@ -96,20 +96,31 @@
 
 .actions {
     display: flex;
-    gap: 1rem; // Reduce gap slightly on mobile for better fit
-    justify-content: center; // Ensure horizontal centering
-    align-items: center; // Ensure vertical centering
-    flex-wrap: wrap;
-    width: 100%; // Ensure container takes full width to allow centering
+    gap: 0.8rem; // Reduce gap slightly on mobile
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; // Allow wrap if screen is VERY small, but aim for row
+    width: 100%;
     margin-top: 1rem;
 
     .btn {
-        padding: 1rem 2.5rem;
-        font-size: 1.1rem;
-        border-radius: 50px; // Rounded for modern feel
+        padding: 0.8rem 1.2rem; // Smaller padding for mobile to fit side-by-side
+        font-size: 0.9rem; // Slightly smaller font
+        border-radius: 50px;
         transition: all 0.3s ease;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         font-weight: 600;
+        white-space: nowrap; // Prevent button text wrapping
+
+        @media (min-width: 480px) {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+
+        @media (min-width: $tablet) {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+        }
     }
 }
