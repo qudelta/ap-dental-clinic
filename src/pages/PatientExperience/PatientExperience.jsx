@@ -5,6 +5,7 @@ import {
     FaCreditCard, FaFileAlt, FaClipboardCheck, FaTint
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Testimonials from '../Home/components/Testimonials';
 
 const PatientExperience = () => {
     const journeySteps = [
@@ -101,6 +102,9 @@ const PatientExperience = () => {
                     </motion.p>
                 </div>
             </div>
+
+            {/* Testimonials Section - Moved from Home as per request */}
+            <Testimonials />
 
             {/* First Visit Journey */}
             <div className="container">

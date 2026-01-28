@@ -19,4 +19,7 @@ export default defineConfig({
   esbuild: {
     target: 'es2015', // Transpile for older browsers including Safari
   },
+  server: {
+    host: true, // Expose to network for mobile testing
+  },
 })

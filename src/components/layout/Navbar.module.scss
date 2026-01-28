@@ -25,6 +25,17 @@
         background: rgba(255, 255, 255, 0.95);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border-bottom-color: rgba(14, 184, 246, 0.2);
+
+        // Shrink logo when navbar shrinks
+        .logoImg {
+            height: 62px;
+            width: 62px;
+
+            @media (min-width: $tablet) {
+                height: 62px;
+                width: 62px;
+            }
+        }
     }
 }
 
@@ -64,16 +75,20 @@
 }
 
 .logoImg {
-    height: 60px;
-    width: auto;
-    transition: transform 0.3s ease;
+    height: 72px; // Maximize size within 80px navbar (leaving 4px padding top/bottom)
+    width: 72px;
+    object-fit: cover;
+    border-radius: 50%; // Circular cut
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Subtle depth
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); // SMOOTH ANIMATION: Matches navbar transition
 
     @media (min-width: $tablet) {
-        height: 55px;
+        height: 72px; // Keep consistent large size
+        width: 72px;
     }
 
     @media (min-width: 1200px) {
-        height: 60px;
+        height: 72px;
     }
 }
 

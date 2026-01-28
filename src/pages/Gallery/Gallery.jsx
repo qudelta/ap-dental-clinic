@@ -45,19 +45,19 @@ const Gallery = () => {
                         className={`${styles.tab} ${activeTab === 'clinic' ? styles.active : ''}`}
                         onClick={() => setActiveTab('clinic')}
                     >
-                        Clinic Environment
-                    </button>
-                    <button
-                        className={`${styles.tab} ${activeTab === 'cases' ? styles.active : ''}`}
-                        onClick={() => setActiveTab('cases')}
-                    >
-                        Smile Stories (Cases)
+                        Baramulla Branch
                     </button>
                     <button
                         className={`${styles.tab} ${activeTab === 'kanispora' ? styles.active : ''}`}
                         onClick={() => setActiveTab('kanispora')}
                     >
                         Kanispora Branch
+                    </button>
+                    <button
+                        className={`${styles.tab} ${activeTab === 'cases' ? styles.active : ''}`}
+                        onClick={() => setActiveTab('cases')}
+                    >
+                        Smile Stories (Cases)
                     </button>
                 </div>
 

@@ -34,8 +34,12 @@ $footer-heading: $white;
 }
 
 .logoImg {
-    height: 80px;
-    width: auto;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    // Border removed by user request
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .about {
