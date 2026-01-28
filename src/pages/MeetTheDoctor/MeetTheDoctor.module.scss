@@ -107,21 +107,34 @@
     transition: all 0.3s ease;
     border: 1px solid transparent;
 
+    // Mobile fix: Constrain width to look like a vertical card
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+
     &:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         border-color: $primary-color;
     }
+
+    @media (min-width: $mobile) {
+        max-width: none; // Allow full grid width on larger screens where columns take over
+    }
 }
 
 .cardImage {
-    height: 200px;
+    height: 300px; // Taller default for proper portrait visibility (mobile first)
     background: linear-gradient(135deg, $secondary-color, color.scale($secondary-color, $lightness: -52.5773%));
-    overflow: hidden; // Clips the zoomed image so it doesn't overlap text
+    overflow: hidden;
     position: relative;
 
+    @media (min-width: $tablet) {
+        height: 250px; // Slightly shorter on tablet if 3 columns
+    }
+
     @media (min-width: $desktop) {
-        height: 180px;
+        height: 220px; // Standard desktop height
     }
 }
 

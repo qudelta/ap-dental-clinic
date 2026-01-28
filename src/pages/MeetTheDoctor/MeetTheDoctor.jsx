@@ -10,7 +10,7 @@ const doctors = [
         qualification: 'BDS, MDS - Orthodontics',
         description: 'Lead Orthodontist specializing in invisible aligners and complex malocclusion cases.',
         experience: '14+ years',
-        imageStyle: { objectPosition: '85% 15%', transform: 'scale(1.5)', transformOrigin: 'center center' }
+        imageStyle: { objectPosition: '75% top' }
     },
     {
         name: 'Dr. Junaid',
@@ -19,7 +19,7 @@ const doctors = [
         qualification: 'BDS, MDS - Endodontics',
         description: 'Root canal specialist with expertise in saving severely damaged teeth.',
         experience: '10+ years',
-        imageStyle: { objectPosition: '50% 25%' }
+        imageStyle: { objectPosition: 'center 20%' }
     },
     {
         name: 'Dr. Amir Bashir',
@@ -28,7 +28,7 @@ const doctors = [
         qualification: 'BDS, MDS - Prosthodontics',
         description: 'Expert in dental implants, crowns, bridges, and full mouth rehabilitation.',
         experience: '12+ years',
-        imageStyle: { objectPosition: '50% 40%' }
+        imageStyle: { objectPosition: 'center top' }
     },
     {
         name: 'Dr. Nidha',
@@ -37,7 +37,7 @@ const doctors = [
         qualification: 'BDS, MDS - Pediatric Dentistry',
         description: 'Child-friendly dentist specializing in dental care for infants through teens.',
         experience: '8+ years',
-        imageStyle: { objectPosition: '50% 15%' }
+        imageStyle: { objectPosition: 'center 15%' }
     },
     {
         name: 'Dr. Sehrish',
@@ -46,7 +46,7 @@ const doctors = [
         qualification: 'BDS',
         description: 'Comprehensive general dentistry including cleanings, fillings, and preventive care.',
         experience: '10+ years',
-        imageStyle: { objectPosition: 'center center' }
+        imageStyle: { objectPosition: 'center top' }
     }
 ];
 
