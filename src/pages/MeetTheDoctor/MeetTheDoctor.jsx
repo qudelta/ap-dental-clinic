@@ -5,40 +5,48 @@ import { Link } from 'react-router-dom';
 const doctors = [
     {
         name: 'Dr. Gurdev Singh Bali',
-        image: '/images/dr-gurdev-bali.jpg',
+        image: '/images/dr-gurdev-new.jpg',
         specialty: 'Orthodontist',
         qualification: 'BDS, MDS - Orthodontics',
         description: 'Lead Orthodontist specializing in invisible aligners and complex malocclusion cases.',
         experience: '14+ years',
-        imageStyle: { objectPosition: 'top center', transform: 'scale(1.25)', transformOrigin: '50% 20%' }
+        imageStyle: { objectPosition: '85% 15%', transform: 'scale(1.5)', transformOrigin: 'center center' }
     },
     {
         name: 'Dr. Junaid',
+        image: '/images/dr-junaid.webp',
         specialty: 'Endodontist',
         qualification: 'BDS, MDS - Endodontics',
         description: 'Root canal specialist with expertise in saving severely damaged teeth.',
-        experience: '10+ years'
+        experience: '10+ years',
+        imageStyle: { objectPosition: '50% 25%' }
     },
     {
         name: 'Dr. Amir Bashir',
+        image: '/images/dr-amir.webp',
         specialty: 'Prosthodontist',
         qualification: 'BDS, MDS - Prosthodontics',
         description: 'Expert in dental implants, crowns, bridges, and full mouth rehabilitation.',
-        experience: '12+ years'
+        experience: '12+ years',
+        imageStyle: { objectPosition: '50% 40%' }
     },
     {
         name: 'Dr. Nidha',
+        image: '/images/dr-nidha.webp',
         specialty: 'Pedodontist',
         qualification: 'BDS, MDS - Pediatric Dentistry',
         description: 'Child-friendly dentist specializing in dental care for infants through teens.',
-        experience: '8+ years'
+        experience: '8+ years',
+        imageStyle: { objectPosition: '50% 15%' }
     },
     {
-        name: 'Dr. Serish',
+        name: 'Dr. Sehrish',
+        image: '/images/dr-sehrish.webp',
         specialty: 'General Dentist',
         qualification: 'BDS',
         description: 'Comprehensive general dentistry including cleanings, fillings, and preventive care.',
-        experience: '10+ years'
+        experience: '10+ years',
+        imageStyle: { objectPosition: 'center center' }
     }
 ];
 

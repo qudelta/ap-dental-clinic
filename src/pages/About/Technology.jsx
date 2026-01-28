@@ -35,7 +35,7 @@ const Technology = () => {
             <div
                 className={styles.hero}
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('/images/equipments.jpg')`,
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('/images/equipments.webp')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}

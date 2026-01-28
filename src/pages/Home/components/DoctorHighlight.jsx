@@ -15,8 +15,8 @@ const DoctorHighlight = () => {
                     className={styles.imageWrapper}
                 >
                     <img
-                        src="/images/our-team.jpg"
-                        alt="AP Dental Team"
+                        src="/images/our-team.webp"
+                        alt="Dr. Gurdev Singh Bali and Team"
                         className={styles.image}
                     />
                 </motion.div>

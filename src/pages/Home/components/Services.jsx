@@ -4,28 +4,32 @@ import styles from './Services.module.scss';
 
 const services = [
     {
+        iconType: 'image',
+        icon: '/images/orthodontics.webp',
         title: 'Orthodontics',
-        desc: 'Alignment solutions for all ages, including metal/ceramic braces and aligners.',
-        link: '/treatments#orthodontics',
-        image: '/images/orthodontics.png'
+        description: 'Straighten your teeth with modern braces and invisible aligners.',
+        link: '/treatments/orthodontics'
     },
     {
+        iconType: 'image',
+        icon: '/images/general.webp',
         title: 'General Dentistry',
-        desc: 'Routine checkups, fillings, and root canal treatments to keep your smile healthy.',
-        link: '/treatments#general',
-        image: '/images/general.png'
+        description: 'Comprehensive care for all ages including cleanings, fillings, and preventive treatments.',
+        link: '/treatments/general'
     },
     {
+        iconType: 'image',
+        icon: '/images/cosmetic.webp',
         title: 'Cosmetic Dentistry',
-        desc: 'Veneers, whitening, and smile design to enhance your natural beauty.',
-        link: '/treatments#cosmetic',
-        image: '/images/cosmetic.png'
+        description: 'Transform your smile with veneers, whitening, and aesthetic bonding.',
+        link: '/treatments/cosmetic'
     },
     {
+        iconType: 'image',
+        icon: '/images/preventive.webp',
         title: 'Preventive Care',
-        desc: 'Personalized hygiene plans to prevent issues before they start.',
-        link: '/treatments#preventive',
-        image: '/images/preventive.png'
+        description: 'Personalized hygiene plans to prevent issues before they start.',
+        link: '/treatments/preventive'
     }
 ];
 
@@ -52,11 +56,11 @@ const Services = () => {
                             className={styles.card}
                         >
                             <div className={styles.imageWrapper}>
-                                <img src={service.image} alt={service.title} className={styles.serviceImage} />
+                                <img src={service.icon} alt={service.title} className={styles.serviceImage} />
                             </div>
                             <div className={styles.cardContent}>
                                 <h3 className={styles.cardTitle}>{service.title}</h3>
-                                <p className={styles.cardDesc}>{service.desc}</p>
+                                <p className={styles.cardDesc}>{service.description}</p>
                                 <span className={styles.link}>Learn More</span>
                             </div>
                         </MotionLink>

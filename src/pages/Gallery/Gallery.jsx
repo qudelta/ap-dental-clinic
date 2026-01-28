@@ -3,12 +3,12 @@ import styles from './Gallery.module.scss';
 
 
 const clinicPhotos = [
-    '/images/clinic-exterior.jpg',
-    '/images/waiting-area.jpg',
-    '/images/consultation-room.jpg',
-    '/images/consultation-room-2.jpg',
-    '/images/books-and-magazines.jpg',
-    '/images/equipments.jpg'
+    { id: 1, src: '/images/clinic-exterior.webp', alt: 'Clinic Entrance' },
+    { id: 2, src: '/images/waiting-area.webp', alt: 'Modern Waiting Area' },
+    { id: 3, src: '/images/consultation-room.webp', alt: 'Advanced Treatment Room' },
+    { id: 4, src: '/images/consultation-room-2.webp', alt: 'Sterilization Center' },
+    { id: 5, src: '/images/books-and-magazines.webp', alt: 'Patient Comfort' },
+    { id: 6, src: '/images/equipments.webp', alt: 'Digital Imaging Technology' }
 ];
 const casesPhotos = [
     '/images/smile-story-1.webp',
@@ -63,9 +63,9 @@ const Gallery = () => {
 
                 <div className={styles.grid}>
                     {activeTab === 'clinic' && (
-                        clinicPhotos.map((src, index) => (
-                            <div key={index} className={styles.item}>
-                                <img src={src} alt={`Clinic Photo ${index + 1}`} className={styles.image} />
+                        clinicPhotos.map((item) => (
+                            <div key={item.id} className={styles.item}>
+                                <img src={item.src} alt={item.alt} className={styles.image} />
                             </div>
                         ))
                     )}

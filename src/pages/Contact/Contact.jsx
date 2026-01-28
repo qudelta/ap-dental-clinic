@@ -13,7 +13,7 @@ const branches = {
         email: 'appointments@apdental.com',
         hours: 'Sat - Thu: 10:00 AM - 6:00 PM',
         subHours: 'Fri: Closed',
-        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.621215160534!2d74.35874231521404!3d34.15617298057774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e19c0a6a4d7d3b%3A0x6b0a6a4d7d3b!2sBaramulla!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin' // Placeholder/Approx for Baramulla
+        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206.226913850453!2d74.34651510842112!3d34.20691301813086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e107f607840e89%3A0x868a75b6225a0dca!2sMint%20Business%20Centre!5e0!3m2!1sen!2sin!4v1769612230636!5m2!1sen!2sin'
     },
     kanispora: {
         name: 'Kanispora Branch',
@@ -53,7 +53,7 @@ const Contact = () => {
 - *Message*: ${data.message || 'N/A'}`;
 
         const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/918825068932?text=${encodedMessage}`;
+        const whatsappUrl = `https://wa.me/919541848030?text=${encodedMessage}`;
 
         window.open(whatsappUrl, '_blank');
         reset();

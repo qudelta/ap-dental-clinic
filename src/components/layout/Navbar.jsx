@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaPhone } from 'react-icons/fa';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -124,6 +124,9 @@ const Navbar = () => {
                             <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
                             <NavLink to="/about" onClick={closeMenu}>Our Story</NavLink>
 
+                            <a href="tel:+919541848030" onClick={closeMenu} className={styles.mobilePhone}>
+                                <FaPhone /> Call Us
+                            </a>
                             <NavLink to="/contact" onClick={closeMenu} className={`${styles.mobileBookBtn} btn btn-primary`}>
                                 Book Consultation
                             </NavLink>

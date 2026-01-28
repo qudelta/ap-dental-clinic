@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/images/consultation-room-2.jpg');
+    background-image: url('/images/consultation-room-2.webp');
     background-size: cover; // Ensure full coverage on all devices
     background-position: center center; // Center strictly on mobile to avoid bad crops
     background-repeat: no-repeat; // PREVENT REPEATING IMAGES
@@ -72,13 +72,11 @@
 .highlightBlue {
     // Blue accent applied to "SMILE" text as requested
     color: $primary-color;
-    text-shadow: 0 0 20px rgba($primary-color, 0.4);
 }
 
 .highlightYellow {
     // Yellow accent applied to "Journey" text as requested
     color: $accent-color;
-    text-shadow: 0 0 20px rgba($accent-color, 0.4);
 }
 
 .subtitle {

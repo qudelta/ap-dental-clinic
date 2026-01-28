@@ -50,7 +50,7 @@ const PatientExperience = () => {
     const techFeatures = [
         {
             title: 'Digital X-Rays',
-            description: '90% less radiation than traditional X-rays with instant results',
+            description: 'Low-radiation digital imaging for instant and accurate diagnosis',
             benefit: 'Safer & Faster'
         },
         {
@@ -59,14 +59,14 @@ const PatientExperience = () => {
             benefit: 'Better Understanding'
         },
         {
-            title: 'Laser Dentistry',
-            description: 'Minimally invasive procedures with faster healing times',
-            benefit: 'Less Discomfort'
+            title: 'Rotary Endodontics',
+            description: 'Advanced electric instruments for faster, more comfortable root canal treatments',
+            benefit: 'Efficient RCT'
         },
         {
-            title: 'Digital Impressions',
-            description: 'No messy molds - comfortable 3D scanning technology',
-            benefit: 'More Comfortable'
+            title: 'Ultrasonic Scaling',
+            description: 'Gentle vibration technology for comfortable and thorough teeth cleaning',
+            benefit: 'Deep Cleaning'
         }
     ];
 
@@ -154,7 +154,7 @@ const PatientExperience = () => {
 
                 {/* Advanced Technology */}
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Advanced Technology</h2>
+                    <h2 className={styles.sectionTitle}>Modern Dental Equipment</h2>
                     <p className={styles.sectionSubtitle}>Modern equipment for better, more comfortable care</p>
 
                     <div className={styles.techGrid}>

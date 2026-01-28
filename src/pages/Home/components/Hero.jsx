@@ -28,6 +28,9 @@ const Hero = () => {
                             <Link to="/contact" className="btn btn-primary">Book Consultation</Link>
                             <Link to="/doctor" className="btn btn-outline">Meet Our Specialists</Link>
                         </div>
+                        <div className={styles.actions} style={{ marginTop: '0.8rem' }}>
+                            <a href="tel:+919541848030" className="btn btn-outline" style={{ borderColor: 'rgba(255,255,255,0.8)', color: 'white', minWidth: '200px' }}>Call Us Now</a>
+                        </div>
                     </motion.div>
                 </div>
             </div>

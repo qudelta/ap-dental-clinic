@@ -9,7 +9,7 @@ const CallToAction = () => {
                 <p className={styles.subheading}>Book your consultation today and take the first step towards a healthier smile.</p>
                 <div className={styles.actions}>
                     <Link to="/contact" className="btn btn-secondary">Book Appointment</Link>
-                    <a href="tel:+919876543210" className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>Call Us Now</a>
+                    <a href="tel:+919541848030" className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>Call Us Now</a>
                 </div>
             </div>
         </section>

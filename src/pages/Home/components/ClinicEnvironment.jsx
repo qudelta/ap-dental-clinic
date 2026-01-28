@@ -3,12 +3,12 @@ import styles from './ClinicEnvironment.module.scss';
 import { Link } from 'react-router-dom';
 
 const photos = [
-    { label: 'Waiting Area', delay: 0, src: '/images/waiting-area.jpg' },
-    { label: 'Consultation Room', delay: 0.1, src: '/images/consultation-room.jpg' },
-    { label: 'Modern Equipment', delay: 0.2, src: '/images/equipments.jpg' },
-    { label: 'Advanced Diagnostics', delay: 0.25, src: '/images/consultation-room-2.jpg' },
-    { label: 'Patient Comfort', delay: 0.3, src: '/images/books-and-magazines.jpg' },
-    { label: 'Clinic Exterior', delay: 0.35, src: '/images/clinic-exterior.jpg' },
+    { label: 'Waiting Area', delay: 0, src: '/images/waiting-area.webp' },
+    { label: 'Consultation Room', delay: 0.1, src: '/images/consultation-room.webp' },
+    { label: 'Modern Equipment', delay: 0.2, src: '/images/equipments.webp' },
+    { label: 'Advanced Diagnostics', delay: 0.25, src: '/images/consultation-room-2.webp' },
+    { label: 'Patient Comfort', delay: 0.3, src: '/images/books-and-magazines.webp' },
+    { label: 'Clinic Exterior', delay: 0.35, src: '/images/clinic-exterior.webp' },
 ];
 
 const ClinicEnvironment = () => {

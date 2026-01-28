@@ -30,7 +30,7 @@ const Story = () => {
                     transition={{ duration: 0.5, delay: 0.15 }}
                 >
                     <img
-                        src="/images/dr-gurdev-new.webp"
+                        src="/images/dr-gurdev-new.jpg"
                         alt="Dr. Gurdev Bali"
                         className={styles.photo}
                     />

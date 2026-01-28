@@ -97,6 +97,7 @@ const Footer = () => {
                     <div className={styles.bottomLinks}>
                         <Link to="/privacy">Privacy Policy</Link>
                         <Link to="/terms">Terms of Service</Link>
+                        <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">Sitemap</a>
                     </div>
                     <div className={styles.credit}>
                         <span>Designed & Developed by <a href="https://qudeltastudios.com" target="_blank" rel="noopener noreferrer">Qudelta Studios</a></span>

@@ -32,11 +32,17 @@ const CosmeticDentistry = () => {
                             </div>
 
                             <div className={styles.card}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/treatments/ceramic-veneers.webp" alt="Ceramic Veneers" className={styles.cardImage} />
+                                </div>
                                 <h3>Ceramic Veneers</h3>
                                 <p>Thin, custom-made shells of porcelain designed to cover the front surface of teeth. They effectively mask discoloration, chips, gaps, or minor misalignment.</p>
                             </div>
 
                             <div className={styles.card}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/treatments/teeth-whitening.webp" alt="Teeth Whitening" className={styles.cardImage} />
+                                </div>
                                 <h3>Teeth Whitening</h3>
                                 <p>Professional in-office whitening can brighten your smile by several shades in just one hour. It's safe, effective, and tailored to your sensitivity levels.</p>
                             </div>
