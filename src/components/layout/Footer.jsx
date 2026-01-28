@@ -12,7 +12,7 @@ const Footer = () => {
                     {/* Column 1: Brand & About */}
                     <div className={styles.col}>
                         <div className={styles.brand}>
-                            <img src="/images/ap-dental-logo-circle.png" alt="AP Dental" className={styles.logoImg} />
+                            <img src="/images/ap-dental-logo-circle.webp" alt="AP Dental" className={styles.logoImg} />
                         </div>
                         <p className={styles.about}>
                             AP Dental Clinic - A premier orthodontic and dental care center providing specialized treatments in a calm, ethical environment.
